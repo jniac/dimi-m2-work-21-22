@@ -1,0 +1,25 @@
+@import url(../../common/css/style.css);
+
+input {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: min(80vw, 80vh);
+  text-align: center;
+  font-weight: 900;
+  outline: none;
+  width: 100%;
+}
+
+.stripes {
+  display: flex;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+.stripes > * {
+  flex: 5;
+}
+.stripes .plain {
+  background-color: #fff;
+  flex: 1;
+}
