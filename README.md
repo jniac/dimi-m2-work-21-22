@@ -4,6 +4,8 @@ Projet collaboratif présentant les travaux des étudiants.
 
 [Page en ligne (github.io)](https://jniac.github.io/dimi-m2-work-21-22/)
 
+- [Projet start (github)](https://github.com/jniac/dimi-m2-start-21-22)
+
 ## Cloner le projet depuis VSCode
 
 Prérequis : GIT DOIT ÊTRE INSTALLÉ!!!!!!!!!!!!!
