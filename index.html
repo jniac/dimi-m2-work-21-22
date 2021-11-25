@@ -1,12 +1,43 @@
 <html>
   <head>
     <title>Travaux DIMI M2</title>
+    <style>
+      @import url(common/css/style.css);
+
+      body {
+        padding: 64px;
+        --spacing: 8px;
+        --color-dark: #333;
+        --color-light: #ddd;
+        background-color: var(--color-light);
+        min-height: 100vh;
+      }
+
+      h1 {
+        margin-bottom: 16px;
+      }
+
+      li {
+        display: flex;
+        padding: 4px 0;
+      }
+
+      li > * + * {
+        margin-left: var(--spacing);
+        padding-left: var(--spacing);
+        border-left: solid 1px var(--color-dark);
+      }
+    </style>
   </head>
   <body>
     <h1>Travaux DIMI M2</h1>
     <ul>
       <li>
         <div class="name">Joseph (jniac)</div>
+        <div class="link"><a href="works/jniac/guess-the-number/index.html">Guess The Number (wip)</a></div>
+      </li>
+      <li>
+        <div class="name">Sarah (???)</div>
         <div class="link"><a href="works/jniac/guess-the-number/index.html">Guess The Number (wip)</a></div>
       </li>
     </ul>
