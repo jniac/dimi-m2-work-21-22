@@ -4,7 +4,7 @@ Projet collaboratif présentant les travaux des étudiants.
 
 ## Liens
 - [Page des travaux (github.io)](https://jniac.github.io/dimi-m2-work-21-22/)
-- [Démos (github.ui)](https://jniac.github.io/dimi-m2-work-21-22/demos)
+- [Démos (github.io)](https://jniac.github.io/dimi-m2-work-21-22/demos)
 
 Autres
 - [Projet start (github)](https://github.com/jniac/dimi-m2-start-21-22)
