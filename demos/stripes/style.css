@@ -11,6 +11,10 @@ input {
   width: 100%;
 }
 
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
 .stripes {
   display: flex;
   mix-blend-mode: difference;
@@ -22,4 +26,10 @@ input {
 .stripes .plain {
   background-color: #fff;
   flex: 1;
+}
+
+.front-color {
+  background-color: rgb(181, 228, 120);
+  pointer-events: none;
+  mix-blend-mode: multiply;
 }
