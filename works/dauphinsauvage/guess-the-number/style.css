@@ -20,5 +20,5 @@ body, body * {
   }
   
 div.image {
-    background-image: url(fleur.svg);
+    background-image: url(asset/svg/fleur.svg);
   }
