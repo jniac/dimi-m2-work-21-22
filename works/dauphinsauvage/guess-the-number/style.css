@@ -19,6 +19,13 @@ body, body * {
     justify-content: center;
   }
   
-div.image {
-    background-image: url(asset/svg/fleur.svg);
+div.chat {
+    background-image: url(asset/svg/chat.svg);
+   
   }
+
+div.dessin {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+}
