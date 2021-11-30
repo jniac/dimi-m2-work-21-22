@@ -29,3 +29,7 @@ div.dessin {
     height: 150px;
     background-size: cover;
 }
+
+div.bonhommevert {
+    background-image: url(asset/svg/bonhommevert.svg)
+}
