@@ -1,0 +1,14 @@
+@import url(../../../common/css/style.css);
+@import url(body-anim.css);
+
+input {
+  border: none;
+  font-family: inherit;
+  padding: 8px;
+  text-align: center;
+  outline: none;
+}
+
+input:focus {
+  background-color: khaki;
+}
