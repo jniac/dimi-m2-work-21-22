@@ -19,10 +19,6 @@ body, body * {
     justify-content: center;
   }
   
-div.chat {
-    background-image: url(asset/svg/chat.svg);
-   
-  }
 
 div.dessin {
     width: 150px;
@@ -30,6 +26,34 @@ div.dessin {
     background-size: cover;
 }
 
+div.chat {
+    background-image: url(asset/svg/chat.svg); 
+}
+
 div.bonhommevert {
     background-image: url(asset/svg/bonhommevert.svg)
+}
+
+div.chien {
+    background-image: url(asset/svg/chien.svg)
+}
+
+div.fleur {
+    background-image: url(asset/svg/fleur.svg)
+}
+
+div.fleur {
+    background-image: url(asset/svg/fraise.svg)
+}
+
+div.fleur {
+    background-image: url(asset/svg/bouli.svg)
+}
+
+div.fleur {
+    background-image: url(asset/svg/hibouchien.svg)
+}
+
+div.fleur {
+    background-image: url(asset/svg/kikou.svg)
 }
