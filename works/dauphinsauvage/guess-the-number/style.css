@@ -58,6 +58,10 @@ div.hibouchien {
     background-image: url(asset/svg/hibouchien.svg)
 }
 
+div.hibouchien {
+    background-image: url(asset/svg/main.svg)
+}
+
 div.dédicasse {
     background-image: url(asset/svg/dédicasse.svg)
 }
