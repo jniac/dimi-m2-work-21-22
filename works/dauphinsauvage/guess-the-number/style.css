@@ -35,12 +35,41 @@ div.dessin span  {
     transition:all 0.2s; 
     opacity:0;
         }
+
+div.chien span  {
+
+    margin-right: 30%;
+    margin-bottom: 15%;
+
+                }
+
+div.bonhommevert span {
+
+    margin-right: 5%;
+    margin-bottom: -28%;
+}
+
+div.main span {
+
+    margin-right: 13%;
+    margin-bottom: -33%;
+}
+
+        
 div.dessin:hover span {
           opacity:1;
         }
 
 div.chat {
     background-image: url(asset/svg/chat.svg);
+    
+}
+div.chat.plus {
+    background-image: url(asset/svg/chatplus.svg);
+    
+}
+div.chat.moins {
+    background-image: url(asset/svg/chatmoins.svg);
     
 }
 div.chat:hover {
@@ -50,11 +79,23 @@ div.chat:hover {
 div.bonhommevert {
     background-image: url(asset/svg/bonhommevert.svg)
 }
+div.bonhommevert.plus {
+    background-image: url(asset/svg/bonhommevertplus.svg)
+}
+div.bonhommevert.moins {
+    background-image: url(asset/svg/bonhommevertmoins.svg)
+}
 div.bonhommevert:hover {
     background: url(asset/svg/bonhommevertnumber.svg);
     } 
 div.chien {
     background-image: url(asset/svg/chien.svg)
+}
+div.chien.plus{
+    background-image: url(asset/svg/chienplus.svg)
+}
+div.chien.moins{
+    background-image: url(asset/svg/chienmoins.svg)
 }
 div.chien:hover {
     background: url(asset/svg/chiennumero.svg);
@@ -63,12 +104,24 @@ div.chien:hover {
 div.kikou {
     background-image: url(asset/svg/kikou.svg)
 }
+div.kikou.plus {
+    background-image: url(asset/svg/kikouPLUS.svg)
+}
+div.kikou.moins {
+    background-image: url(asset/svg/kikoumoins.svg)
+}
 div.kikou:hover {
     background: url(asset/svg/kikounumero.svg);
     } 
 
 div.fleur {
     background-image: url(asset/svg/fleur.svg)
+}
+div.fleur.plus {
+    background-image: url(asset/svg/fleurplus.svg)
+}
+div.fleur.moins {
+    background-image: url(asset/svg/fleurmoins.svg)
 }
 div.fleur:hover {
     background: url(asset/svg/fleurnumero.svg);
@@ -77,12 +130,24 @@ div.fleur:hover {
 div.fraise {
     background-image: url(asset/svg/fraise.svg)
 }
+div.fraise.plus {
+    background-image: url(asset/svg/fraiseplus.svg)
+}
+div.fraise.moins {
+    background-image: url(asset/svg/fraisemoins.svg)
+}
 div.fraise:hover {
     background: url(asset/svg/fraisenumero.svg);
     } 
 
 div.bouli {
     background-image: url(asset/svg/bouli.svg)
+}
+div.bouli.plus{
+    background-image: url(asset/svg/bouliplus.svg)
+}
+div.bouli.moins{
+    background-image: url(asset/svg/boulimoins.svg)
 }
 div.bouli:hover {
     background: url(asset/svg/boulinumero.svg);
@@ -91,6 +156,12 @@ div.bouli:hover {
 div.hibouchien {
     background-image: url(asset/svg/hibouchien.svg)
 }
+div.hibouchien.plus {
+    background-image: url(asset/svg/hibouchienplus.svg)
+}
+div.hibouchien.moins{
+    background-image: url(asset/svg/hibouchienmoins.svg)
+}
 div.hibouchien:hover {
     background: url(asset/svg/hibouchiennumero.svg);
     } 
@@ -98,12 +169,24 @@ div.hibouchien:hover {
 div.main {
     background-image: url(asset/svg/main.svg)
 }
+div.main.plus {
+    background-image: url(asset/svg/mainplus.svg)
+}
+div.main.moins {
+    background-image: url(asset/svg/mainmoins.svg)
+}
 div.main:hover {
     background: url(asset/svg/mainnumero.svg);
     } 
 
 div.dedicasse {
     background-image: url(asset/svg/dedicasse.svg)
+}
+div.dedicasse.plus {
+    background-image: url(asset/svg/dedicasseplus.svg)
+}
+div.dedicasse.moins {
+    background-image: url(asset/svg/dedicasse.moins.svg)
 }
 
 span.number {
