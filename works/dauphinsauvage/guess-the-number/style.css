@@ -68,10 +68,19 @@ div.main {
     background-image: url(asset/svg/main.svg)
 }
 
-div.dédicasse {
-    background-image: url(asset/svg/dédicasse.svg)
+div.dedicasse {
+    background-image: url(asset/svg/dedicasse.svg)
 }
 
-div.dédicasse:hover {
-    background: url(asset/svg/dédicassenumero.svg);
+div.dedicasse:hover {
+    background: url(asset/svg/deedicassenumero.svg);
     } 
+
+div.dessin span  {
+    transition:all 0.2s; 
+    opacity:0;
+        }
+div.dessin:hover span {
+    
+          opacity:1;
+        }
