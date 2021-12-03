@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Lexend+Exa:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body, body * {
     margin: 0;
@@ -24,63 +24,97 @@ body, body * {
 div.dessin {
     width: 200px;
     height: 200px;
-    background-size: cover;  /*ajout*/
-    position: absolute;
+    background-size: cover;  
+    /* position: absolute; ajout*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-div.chat {
-    background-image: url(asset/svg/chat.svg);
-    
-}
-
-div.bonhommevert {
-    background-image: url(asset/svg/bonhommevert.svg)
-}
-
-div.chien {
-    background-image: url(asset/svg/chien.svg)
-}
-
-div.kikou {
-    background-image: url(asset/svg/kikou.svg)
-}
-
-div.fleur {
-    background-image: url(asset/svg/fleur.svg)
-}
-
-div.fraise {
-    background-image: url(asset/svg/fraise.svg)
-}
-
-div.bouli {
-    background-image: url(asset/svg/bouli.svg)
-}
-
-div.hibouchien {
-    background-image: url(asset/svg/hibouchien.svg)
-}
-
-div.main {
-    background-image: url(asset/svg/main.svg)
-}
-
-div.dedicasse {
-    background-image: url(asset/svg/dedicasse.svg)
-}
-
-div.dedicasse:hover {
-    background: url(asset/svg/dedicassenumero.svg);
-    } 
 
 div.dessin span  {
     transition:all 0.2s; 
     opacity:0;
         }
 div.dessin:hover span {
-    
           opacity:1;
         }
+
+div.chat {
+    background-image: url(asset/svg/chat.svg);
+    
+}
+div.chat:hover {
+    background: url(asset/svg/chatnumero.svg);
+    } 
+
+div.bonhommevert {
+    background-image: url(asset/svg/bonhommevert.svg)
+}
+div.bonhommevert:hover {
+    background: url(asset/svg/bonhommevertnumber.svg);
+    } 
+div.chien {
+    background-image: url(asset/svg/chien.svg)
+}
+div.chien:hover {
+    background: url(asset/svg/chiennumero.svg);
+    } 
+
+div.kikou {
+    background-image: url(asset/svg/kikou.svg)
+}
+div.kikou:hover {
+    background: url(asset/svg/kikounumero.svg);
+    } 
+
+div.fleur {
+    background-image: url(asset/svg/fleur.svg)
+}
+div.fleur:hover {
+    background: url(asset/svg/fleurnumero.svg);
+    } 
+
+div.fraise {
+    background-image: url(asset/svg/fraise.svg)
+}
+div.fraise:hover {
+    background: url(asset/svg/fraisenumero.svg);
+    } 
+
+div.bouli {
+    background-image: url(asset/svg/bouli.svg)
+}
+div.bouli:hover {
+    background: url(asset/svg/boulinumero.svg);
+    } 
+
+div.hibouchien {
+    background-image: url(asset/svg/hibouchien.svg)
+}
+div.hibouchien:hover {
+    background: url(asset/svg/hibouchiennumero.svg);
+    } 
+
+div.main {
+    background-image: url(asset/svg/main.svg)
+}
+div.main:hover {
+    background: url(asset/svg/mainnumero.svg);
+    } 
+
+div.dedicasse {
+    background-image: url(asset/svg/dedicasse.svg)
+}
+
+span.number {
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 200%;
+
+}
+
+div.dedicasse:hover {
+    background: url(asset/svg/dedicassenumero.svg);
+    } 
+
