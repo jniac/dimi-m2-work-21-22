@@ -24,6 +24,10 @@ div.dessin {
     width: 200px;
     height: 200px;
     background-size: cover;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.chat {
