@@ -1,4 +1,4 @@
-const mysteryNumber = Math.round(Math.random() * 100)
+/*const mysteryNumber = Math.round(Math.random() * 100)
 
 const response = document.querySelector('div.response')
 response.remove()
@@ -50,4 +50,17 @@ document.body.onkeydown = (event) => {
   if (event.key === 'Enter') {
     submit()
   }
-} 
+} */
+
+//HELP//
+<img id=dédicasse src="asset/svg/dédicassenumero.svg" onmouseover=passageDeLaSouris(this); onmouseout=departDeLaSouris(this); />
+
+//Affecte la nouvelle image lorsque la souris survole l'élément
+function passaeDeLaSouris(element) {
+    element.setAttribute('src', 'http://dummyimage.com/100x100/eb00eb/fff');
+    }
+
+//Affecte l'image de départ lorsque la souris ne survole plus l'élément
+    function departDeLaSouris(element) {
+    element.setAttribute('src', 'http://dummyimage.com/100x100/000/fff');
+    }

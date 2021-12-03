@@ -1,14 +1,15 @@
 
+
 body, body * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     position: relative;
+    font-family: 'Lexend Exa', sans-serif;
   }
   
   body {
     min-height: 100vh;
-    font-family: 'Roboto', sans-serif;
     background-color: #eee;
   }
   
@@ -23,7 +24,7 @@ body, body * {
 div.dessin {
     width: 200px;
     height: 200px;
-    background-size: cover;
+    background-size: cover;  /*ajout*/
     position: absolute;
     display: flex;
     justify-content: center;
@@ -31,7 +32,8 @@ div.dessin {
 }
 
 div.chat {
-    background-image: url(asset/svg/chat.svg); 
+    background-image: url(asset/svg/chat.svg);
+    
 }
 
 div.bonhommevert {
@@ -69,3 +71,7 @@ div.main {
 div.dédicasse {
     background-image: url(asset/svg/dédicasse.svg)
 }
+
+div.dédicasse:hover {
+    background: url(asset/svg/dédicassenumero.svg);
+    } 
