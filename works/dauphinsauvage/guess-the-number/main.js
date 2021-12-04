@@ -1,66 +1,95 @@
-/*const mysteryNumber = Math.round(Math.random() * 100)
-
+const mysteryNumber = Math.round(Math.random() * 100)
+console.log(mysteryNumber);
 const response = document.querySelector('div.response')
-response.remove()
+// response.remove()
+var essai = 1
+
+const animals = [
+    "chat",
+    "bonhommevert",
+    "chien",
+    "kikou",
+    "fleur",
+    "fraise",
+    "bouli",
+    "hibouchien",
+    "main",
+    "dedicasse"
+];
+
+for (var i = 0; i < 100; i++) {
+    let mysteryZindex = Math.round(Math.random() * 100);
+    let mysteryX = Math.round(Math.random() * 80) + 1;
+    let mysteryY = Math.round(Math.random() * 70) + 1;
+    let mysteryAnimal = animals[Math.round(Math.random() * 9)];
+    let mysteryScale = 0.5 + (Math.random() * 0.6);
+
+    let clone = document.querySelector('#original .dessin').cloneNode(true);
+
+    clone.style.zindex = mysteryZindex;
+    clone.style.left = mysteryX + "%";
+    clone.style.top = mysteryY + "%";
+    clone.style.transform = "scale(" + mysteryScale + ")";
+    clone.className += " " + mysteryAnimal;
+    clone.querySelector('span.number').innerHTML = i + 1;
+
+    document.querySelector('#cadre').appendChild(clone);
+}
 
 const cloneResponse = (inputValue, commentValue) => {
-  const clone = response.cloneNode(true)
-  document.body.append(clone)
-  clone.querySelector('span.input').innerHTML = inputValue
-  clone.querySelector('span.comment').innerHTML = commentValue
+    const clone = response.cloneNode(true)
+    document.body.append(clone)
+    clone.querySelector('span.input').innerHTML = inputValue
+    clone.querySelector('span.comment').innerHTML = commentValue
 }
 
-const submit = () => {
-  const input = document.querySelector('input')
-  const inputNumber = parseFloat(input.value)
+const submit = (el) => {
 
-  document.body.classList.remove('wrong-state')
+    response.innerHTML = essai++;
+    const input = el.querySelector('.number');
 
-  if (isNaN(inputNumber)) {
+    const inputNumber = parseFloat(input.innerHTML)
 
-    cloneResponse(input.value, `Ceci n'est pas un nombre`)
-    document.body.classList.add('wrong-state')
+    document.body.classList.remove('wrong-state')
 
-  } else if (inputNumber < 0 || inputNumber > 100) {
+    if (isNaN(inputNumber)) {
+        el.className += " error";
+        // cloneResponse(input.value, 'Ceci n\'est pas un nombre')
+        document.body.classList.add('wrong-state')
 
-    cloneResponse(input.value, `Le nombre doit être compris entre 0 et 100.`)
-    document.body.classList.add('wrong-state')
+    } else if (inputNumber < 0 || inputNumber > 100) {
+        el.className += " error disparaitre";
+        // cloneResponse(input.value, 'Le nombre doit être compris entre 0 et 100.')
+        document.body.classList.add('wrong-state')
 
-  } else if (inputNumber < mysteryNumber) {
+    } else if (inputNumber < mysteryNumber) {
+        el.className += " plus disparaitre";
 
-    cloneResponse(input.value, `Trop petit.`)
+        // cloneResponse(input.value, 'Trop petit.')
 
-  } else if (inputNumber > mysteryNumber) {
+    } else if (inputNumber > mysteryNumber) {
 
-    cloneResponse(input.value, `Trop grand.`)
+        el.className += " moins disparaitre";
+        // cloneResponse(input.value, 'Trop grand.')
 
-  } else if (inputNumber === mysteryNumber) {
+    } else if (inputNumber === mysteryNumber) {
 
-    cloneResponse(input.value, `EXACT!!!`)
-  }
-
-  input.value = ''
+        document.body.classList.add('exact')
+        // cloneResponse(input.value, 'EXACT!!!')
+    }
 }
+var dessins = document.querySelectorAll('.dessin');
 
-document.querySelector('button#submit').onclick = () => {
-  submit()
+for (var i = 0; i < dessins.length; i++) {
+    dessins[i].addEventListener('click', function (event) {
+        event.preventDefault();
+        submit(this);
+    });
 }
 
 document.body.onkeydown = (event) => {
-  if (event.key === 'Enter') {
-    submit()
-  }
-} */
-
-//HELP//
-<img id=dédicasse src="asset/svg/dédicassenumero.svg" onmouseover=passageDeLaSouris(this); onmouseout=departDeLaSouris(this); />
-
-//Affecte la nouvelle image lorsque la souris survole l'élément
-function passaeDeLaSouris(element) {
-    element.setAttribute('src', 'http://dummyimage.com/100x100/eb00eb/fff');
+    if (event.key === 'Enter') {
+        submit()
     }
-
-//Affecte l'image de départ lorsque la souris ne survole plus l'élément
-    function departDeLaSouris(element) {
-    element.setAttribute('src', 'http://dummyimage.com/100x100/000/fff');
-    }
+}
+    
