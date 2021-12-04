@@ -78,14 +78,14 @@ body {
     display: none !important;
   } */
 }
-
+/*compteur 
 div.response {
     position: absolute;
     top: 1%;
     left: 2%;
     color: sandybrown;
     font-weight: 900;
-}
+}*/
 
 div#original {
     display: none;
@@ -115,12 +115,20 @@ div.dessin:hover {
 div.dessin.disparaitre {
     /* animation-name: cacher;
     animation-duration: 3s; */
-    transition: transform 3s ease-out;
-    transform: scale(0) !important;
+    /*transition: transform 2s ease-out;*/
+    transition: all 2s ease-out;
+    /*transform: scale(0) !important; */
+    opacity: O;
     transform-origin: center;
 }
 
-div.dessin span {
+/*mis en haut (il était en bas) */
+div.dessin:hover span {
+    opacity: 1;
+}
+
+/*ajout .plus span */
+div.dessin span , .plus span , .moins span, div.dessin.plus:hover span , div.dessin.moins:hover span {       
     transition: all 0.2s;
     opacity: 0;
 }
@@ -157,9 +165,6 @@ div.hibouchien span {
 }
 
 
-div.dessin:hover span {
-    opacity: 1;
-}
 
 div.chat {
     background-image: url(asset/svg/chat.svg);

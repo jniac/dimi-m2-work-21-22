@@ -45,7 +45,7 @@ const cloneResponse = (inputValue, commentValue) => {
 
 const submit = (el) => {
 
-    response.innerHTML = essai++;
+    //response.innerHTML = essai++;   (compteur)
     const input = el.querySelector('.number');
 
     const inputNumber = parseFloat(input.innerHTML)
@@ -54,7 +54,7 @@ const submit = (el) => {
 
     if (isNaN(inputNumber)) {
         el.className += " error";
-        // cloneResponse(input.value, 'Ceci n\'est pas un nombre')
+        // cloneResponse(input.value, 'Ceci n'est pas un nombre')
         document.body.classList.add('wrong-state')
 
     } else if (inputNumber < 0 || inputNumber > 100) {
