@@ -113,11 +113,12 @@ div.dessin:hover {
 }
 
 div.dessin.disparaitre {
-    /* animation-name: cacher;
-    animation-duration: 3s; */
-    /*transition: transform 2s ease-out;*/
+    z-index: 2;
+    animation-name: cacher;
+    animation-duration: 4s; 
+    transition: transform 2s ease-out;
     transition: all 2s ease-out;
-    /*transform: scale(0) !important; */
+    transform: scale(0) !important; 
     opacity: O;
     transform-origin: center;
 }
@@ -336,4 +337,15 @@ span.number {
     font-weight: 700;
     font-size: 200%;
 
+}
+body.exact div.response {
+
+    position: absolute; 
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background : url(asset/svg/youwin.gif) center center no-repeat;
+    background-size: cover;
 }

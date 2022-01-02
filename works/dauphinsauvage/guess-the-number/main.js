@@ -17,6 +17,8 @@ const animals = [
     "dedicasse"
 ];
 
+
+
 for (var i = 0; i < 100; i++) {
     let mysteryZindex = Math.round(Math.random() * 100);
     let mysteryX = Math.round(Math.random() * 80) + 1;
