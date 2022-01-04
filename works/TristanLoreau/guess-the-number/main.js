@@ -1,4 +1,3 @@
-
 const numberTokenDiv = document.querySelector('div.number-token')
 numberTokenDiv.remove()
 
