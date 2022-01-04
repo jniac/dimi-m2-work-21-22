@@ -1,34 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Gemunu+Libre:wght@200&display=swap');
-body ,body * {
-    margin :0;
-    box-sizing: border-box;
-    position: relative;
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url(anim.css);
+
+body, body * {
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
 }
+
 body {
-    background-color:lightslategray;
-    min-height: 100vh;
-    font-family: 'Roboto condensed', sans-serif; 
-    text-align: center;
+  background-color: lightslategrey;
+  min-height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.flex-center {
-   display: flex; 
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-}
-h1 {
-    font-size: 96px;
-    
+body.wrong-state {
+  background-color: red;
+  animation-name: wrong;
+  animation-duration: 1.2s;
 }
 
+input {
+  background-color: #fff3;
+  font-family: inherit;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+}
 
-p span {
-    font-family : 'Inconsolata' , monospace;
-    display: block;
-    background-color: #fff3;
-    border: solid 2px white;
-    border-radius: 16px;
-    padding: 16px;
+div.response {
+  display: flex;
+  align-items: center;
+  border: solid 1px white;
+  border-radius: 4px;
+  margin-top: 8px;
+}
 
+div.response span.result {
+  font-style: italic;
 }
