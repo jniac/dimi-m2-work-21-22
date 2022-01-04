@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Lexend+Exa:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: 'Lexend Exa', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #eee;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes wrong {
+    0% {
+        transform: translateX(-32px)
+    }
+
+    16% {
+        transform: translateX(16px)
+    }
+
+    32% {
+        transform: translateX(-8px)
+    }
+
+    48% {
+        transform: translateX(4px)
+    }
+
+    64% {
+        transform: translateX(-2px)
+    }
+
+    80% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes cacher {
+
+    30% {
+        transform: scale(1.1);
+    }
+
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    /* 99% {
+        display: block;
+    } */
+    100% {
+        display: none;
+    }
+
+    /* from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0) !important;
+        opacity: 0 !important;
+    } */
+
+    /* 0% {
+    opacity: 80%;
+  }
+  16% {
+    transform: scale(0.8)
+  }
+  32% {
+    transform: scale(0.4)
+  }
+  48% {
+    opacity: 48%;
+    transform: scale(0.1)
+  }
+  64% {
+    opacity: 0;
+  }
+  80% {
+    display: none !important;
+  } */
+}
+/*compteur 
+div.response {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    color: sandybrown;
+    font-weight: 900;
+}*/
+
+div#original {
+    display: none;
+}
+
+div#cadre {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+div.dessin {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+div.dessin:hover {
+    z-index: 1;
+}
+
+div.dessin.disparaitre {
+    z-index: 2;
+    animation-name: cacher;
+    animation-duration: 2s; 
+    animation-fill-mode: both;
+}
+div.dessin.killed {
+    display: none;
+}
+
+/*mis en haut (il était en bas) */
+div.dessin:hover span {
+    opacity: 1;
+}
+
+/*ajout .plus span */
+div.dessin span , .plus span , .moins span, div.dessin.plus:hover span , div.dessin.moins:hover span {       
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+div.chien span {
+
+    margin-right: 30%;
+    margin-bottom: 15%;
+
+}
+
+div.bonhommevert span {
+
+    margin-right: 5%;
+    margin-bottom: -28%;
+}
+
+div.main span {
+
+    margin-right: 13%;
+    margin-bottom: -33%;
+}
+
+div.kikou span {
+
+    margin-right: 3%;
+    margin-bottom: -9%;
+}
+
+div.hibouchien span {
+
+    margin-right: -5%;
+    margin-bottom: -7%;
+}
+
+
+
+div.chat {
+    background-image: url(asset/svg/chat.svg);
+
+}
+
+div.chat:hover {
+    background: url(asset/svg/chatnumero.svg);
+}
+
+div.chat.plus {
+    background-image: url(asset/svg/chatplus.svg);
+
+}
+
+div.chat.moins {
+    background-image: url(asset/svg/chatmoins.svg);
+
+}
+
+div.bonhommevert {
+    background-image: url(asset/svg/bonhommevert.svg)
+}
+
+div.bonhommevert:hover {
+    background: url(asset/svg/bonhommevertnumber.svg);
+}
+
+div.bonhommevert.plus {
+    background-image: url(asset/svg/bonhommevertplus.svg)
+}
+
+div.bonhommevert.moins {
+    background-image: url(asset/svg/bonhommevertmoins.svg)
+}
+
+div.chien {
+    background-image: url(asset/svg/chien.svg)
+}
+
+div.chien:hover {
+    background: url(asset/svg/chiennumero.svg);
+}
+
+div.chien.plus {
+    background-image: url(asset/svg/chienplus.svg)
+}
+
+div.chien.moins {
+    background-image: url(asset/svg/chienmoins.svg)
+}
+
+div.kikou {
+    background-image: url(asset/svg/kikou.svg)
+}
+
+div.kikou:hover {
+    background: url(asset/svg/kikounumero.svg);
+}
+
+div.kikou.plus {
+    background-image: url(asset/svg/kikouPLUS.svg)
+}
+
+div.kikou.moins {
+    background-image: url(asset/svg/kikoumoins.svg)
+}
+
+div.fleur {
+    background-image: url(asset/svg/fleur.svg)
+}
+
+div.fleur:hover {
+    background: url(asset/svg/fleurnumero.svg);
+}
+
+div.fleur.plus {
+    background-image: url(asset/svg/fleurplus.svg)
+}
+
+div.fleur.moins {
+    background-image: url(asset/svg/fleurmoins.svg)
+}
+
+div.fraise {
+    background-image: url(asset/svg/fraise.svg)
+}
+
+div.fraise:hover {
+    background: url(asset/svg/fraisenumero.svg);
+}
+
+div.fraise.plus {
+    background-image: url(asset/svg/fraiseplus.svg)
+}
+
+div.fraise.moins {
+    background-image: url(asset/svg/fraisemoins.svg)
+}
+
+div.bouli {
+    background-image: url(asset/svg/bouli.svg)
+}
+
+div.bouli:hover {
+    background: url(asset/svg/boulinumero.svg);
+}
+
+div.bouli.plus {
+    background-image: url(asset/svg/bouliplus.svg)
+}
+
+div.bouli.moins {
+    background-image: url(asset/svg/boulimoins.svg)
+}
+
+div.hibouchien {
+    background-image: url(asset/svg/hibouchien.svg)
+}
+
+div.hibouchien:hover {
+    background: url(asset/svg/hibouchiennumero.svg);
+}
+
+div.hibouchien.plus {
+    background-image: url(asset/svg/hibouchienplus.svg)
+}
+
+div.hibouchien.moins {
+    background-image: url(asset/svg/hibouchienmoins.svg)
+}
+
+div.main {
+    background-image: url(asset/svg/main.svg)
+}
+
+div.main:hover {
+    background: url(asset/svg/mainnumero.svg);
+}
+
+div.main.plus {
+    background-image: url(asset/svg/mainplus.svg)
+}
+
+div.main.moins {
+    background-image: url(asset/svg/mainmoins.svg)
+}
+
+div.dedicasse {
+    background-image: url(asset/svg/dedicasse.svg)
+}
+
+
+div.dedicasse:hover {
+    background: url(asset/svg/dedicassenumero.svg);
+}
+
+div.dedicasse.plus {
+    background-image: url(asset/svg/dedicasseplus.svg)
+}
+
+div.dedicasse.moins {
+    background-image: url(asset/svg/dedicassemoins.svg)
+}
+
+span.number {
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 200%;
+
+}
+body.exact div.response {
+
+    position: absolute; 
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background : url(asset/svg/youwin.gif) center center no-repeat;
+    background-size: cover;
+}

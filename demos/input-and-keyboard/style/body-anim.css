@@ -1,0 +1,31 @@
+
+body {
+  --default-background-color: rgb(231, 203, 236);
+  background-color: var(--default-background-color);
+}
+
+body.input-anim {
+  animation: input-anim 0.3s ease-out;
+}
+
+@keyframes input-anim {
+  0% {
+    background-color: palegoldenrod;
+  }
+  100% {
+    background-color: var(--default-background-color);
+  }
+}
+
+body.change-anim {
+  animation: change-anim 1s ease-out;
+}
+
+@keyframes change-anim {
+  0% {
+    background-color: orchid;
+  }
+  100% {
+    background-color: var(--default-background-color);
+  }
+}
