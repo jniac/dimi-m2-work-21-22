@@ -48,7 +48,27 @@ body {
 }
 
 @keyframes cacher {
-    from {
+
+    30% {
+        transform: scale(1.1);
+    }
+
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    /* 99% {
+        display: block;
+    } */
+    100% {
+        display: none;
+    }
+
+    /* from {
         transform: scale(1);
         opacity: 1;
     }
@@ -56,7 +76,7 @@ body {
     to {
         transform: scale(0) !important;
         opacity: 0 !important;
-    }
+    } */
 
     /* 0% {
     opacity: 80%;
@@ -115,12 +135,11 @@ div.dessin:hover {
 div.dessin.disparaitre {
     z-index: 2;
     animation-name: cacher;
-    animation-duration: 4s; 
-    transition: transform 2s ease-out;
-    transition: all 2s ease-out;
-    transform: scale(0) !important; 
-    opacity: O;
-    transform-origin: center;
+    animation-duration: 2s; 
+    animation-fill-mode: both;
+}
+div.dessin.killed {
+    display: none;
 }
 
 /*mis en haut (il était en bas) */

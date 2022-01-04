@@ -48,11 +48,16 @@ const cloneResponse = (inputValue, commentValue) => {
 const submit = (el) => {
 
     //response.innerHTML = essai++;   (compteur)
-    const input = el.querySelector('.number');
+    const spanNumber = el.querySelector('.number');
 
-    const inputNumber = parseFloat(input.innerHTML)
+    const inputNumber = parseFloat(spanNumber.innerHTML)
 
     document.body.classList.remove('wrong-state')
+
+    const killElement = () => {
+        el.classList.add('killed')
+    }
+    setTimeout(killElement, 2000)
 
     if (isNaN(inputNumber)) {
         el.className += " error";
@@ -80,18 +85,11 @@ const submit = (el) => {
         // cloneResponse(input.value, 'EXACT!!!')
     }
 }
-var dessins = document.querySelectorAll('.dessin');
 
-for (var i = 0; i < dessins.length; i++) {
-    dessins[i].addEventListener('click', function (event) {
-        event.preventDefault();
-        submit(this);
-    });
-}
-
-document.body.onkeydown = (event) => {
-    if (event.key === 'Enter') {
-        submit()
+const dessins = document.querySelectorAll('.dessin')
+for (const dessin of dessins) {
+    dessin.onclick = () => {
+        submit(dessin)
     }
 }
     
