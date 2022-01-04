@@ -1,0 +1,26 @@
+@import url(../../../common/css/style.css);
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100vh;
+  background-color: rgb(250, 222, 252);
+  font-family: 'Gemunu Libre', sans-serif;
+  --token-size: 96px;
+}
+
+
+div.number-token {
+  position: absolute;
+  width: var(--token-size);
+  height: var(--token-size);
+  background-color: rgb(123, 207, 255);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4em;
+}
