@@ -14,7 +14,7 @@ const randomCloneNumberTokenDiv = (n) => {
 }
 
 const generateTokens = () => {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 50; i++) {
     randomCloneNumberTokenDiv(i + 1)
   }
 }
