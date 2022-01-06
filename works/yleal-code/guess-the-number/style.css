@@ -1,0 +1,18 @@
+@import url(../../../common/css/style.css);
+
+body {
+  background-color: rgb(184, 39, 39);
+  --token-size: 96px;
+}
+
+div.number-token {
+  position: absolute;
+  width: var(--token-size);
+  height: var(--token-size);
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+}
