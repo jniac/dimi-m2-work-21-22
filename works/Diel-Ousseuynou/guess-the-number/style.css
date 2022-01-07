@@ -50,7 +50,6 @@ div.response span.comment {
     border-left: 1px rgba(66, 0, 0, 0.561) solid;
     background: linear-gradient(135deg,#ff00006b 0%, #ff0000da 100%);
     position: left ;
-    float: left;
     margin-top: 10px;
     height: 200px;
     width: 300px;
