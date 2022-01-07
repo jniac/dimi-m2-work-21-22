@@ -56,11 +56,9 @@ p span {
 
 footer , p {
   
-  position: absolute;
+  position: relative;
   justify-content: center;
-  padding: -95px;
-  top:-80%;
-  margin-top: 50%;
+  margin-bottom: 10px;
   background-color: #45a1ff;
   color: #fff;
 }
