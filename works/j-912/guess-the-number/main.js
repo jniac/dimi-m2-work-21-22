@@ -1,9 +1,14 @@
 var Vbase = 0
+var variateur = 1
+var inputVbase = 0
 
 const mysteryNumber = Math.round(Math.random() * 100)
 
 const baliseVbase = document.querySelector('h2.baliseVbase')
 baliseVbase.innerHTML = `Valeur de base : ${Vbase}`
+
+const addOrSou = document.querySelector('h3.addOrSou')
+addOrSou.innerHTML = `Phase d'addition`
 
 const response = document.querySelector('div.response')
 response.remove()
@@ -17,9 +22,15 @@ const cloneResponse = (inputValue, commentValue) => {
 
 const submit = () => {
   const input = document.querySelector('input')
-  const inputNumber = parseFloat(input.value)
+  const inputNumber = Math.abs ( parseFloat(input.value) )
 
-  var inputVbase = Vbase + inputNumber
+  //var inputVbase = Vbase + inputNumber
+
+  if (variateur === 1) {
+    inputVbase = Vbase + inputNumber
+  } else if (variateur === 0) {
+    inputVbase = Vbase - inputNumber
+  }
 
   document.body.classList.remove('wrong-state')
 
@@ -36,18 +47,39 @@ const submit = () => {
 } else if (inputVbase < mysteryNumber) { // si plus petit que mysteryNumber
 
     cloneResponse(inputVbase, `Trop petit.`)
+    if (variateur === 0) {
+      variateur = 1
+      addOrSou.innerHTML = `Phase d'addition`
+    } else if (variateur === 1) {
+      variateur = 0
+      addOrSou.innerHTML = `Phase de soustraction`
+    }
     Vbase = inputVbase
     baliseVbase.innerHTML = `Valeur de base : ${Vbase}` //refresh affichage Vbase
 
   } else if (inputVbase > mysteryNumber) { // si plus grand que mysteryNumber
 
     cloneResponse(inputVbase, `Trop grand.`)
+    if (variateur === 0) {
+      variateur = 1
+      addOrSou.innerHTML = `Phase d'addition`
+    } else if (variateur === 1) {
+      variateur = 0
+      addOrSou.innerHTML = `Phase de soustraction`
+    }
     Vbase = inputVbase
     baliseVbase.innerHTML = `Valeur de base : ${Vbase}` //refresh affichage Vbase
 
   } else if (inputVbase === mysteryNumber) { // si égal à mysteryNumber
 
     cloneResponse(inputVbase, `EXACT!!!`)
+    if (variateur === 0) {
+      variateur = 1
+      addOrSou.innerHTML = `Phase d'addition`
+    } else if (variateur === 1) {
+      variateur = 0
+      addOrSou.innerHTML = `Phase de soustraction`
+    }
     Vbase = inputVbase
     baliseVbase.innerHTML = `Valeur de base : ${Vbase}` //refresh affichage Vbase
   }
