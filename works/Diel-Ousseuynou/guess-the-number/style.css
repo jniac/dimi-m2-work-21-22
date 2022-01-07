@@ -8,7 +8,9 @@ body, body * {
 }
 
 body {
-  background-color: rgb(50, 243, 233);
+  /*background-color: rgb(50, 243, 233);*/
+  background-image: url(asset/img.svg);
+
   min-height: 100vh;
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
@@ -23,8 +25,7 @@ body.wrong-state {
 }
 
 input {
-  /*background-color: #fff3;*/
-  background-image: url(asset/img.svg);
+  background-color: #fff3;
   font-family: inherit;
   border: none;
   padding: 8px 16px;
