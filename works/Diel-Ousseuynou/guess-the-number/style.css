@@ -8,7 +8,8 @@ body, body * {
 }
 
 body {
-  background-color: lightslategrey;
+  /*background-color: lightslategrey;*/
+  background-image: url(asset/img.svg);
   min-height: 100vh;
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
