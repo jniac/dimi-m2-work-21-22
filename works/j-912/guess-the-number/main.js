@@ -1,4 +1,14 @@
+var Vbase = 0
+var variateur = 1
+var inputVbase = 0
+
 const mysteryNumber = Math.round(Math.random() * 100)
+
+const baliseVbase = document.querySelector('h2.baliseVbase')
+baliseVbase.innerHTML = `Valeur de base : ${Vbase}`
+
+const addOrSou = document.querySelector('h3.addOrSou')
+addOrSou.innerHTML = `Phase d'addition`
 
 const response = document.querySelector('div.response')
 response.remove()
@@ -12,31 +22,66 @@ const cloneResponse = (inputValue, commentValue) => {
 
 const submit = () => {
   const input = document.querySelector('input')
-  const inputNumber = parseFloat(input.value)
+  const inputNumber = Math.abs ( parseFloat(input.value) )
+
+  //var inputVbase = Vbase + inputNumber
+
+  if (variateur === 1) {
+    inputVbase = Vbase + inputNumber
+  } else if (variateur === 0) {
+    inputVbase = Vbase - inputNumber
+  }
 
   document.body.classList.remove('wrong-state')
 
-  if (isNaN(inputNumber)) {
+  if (isNaN(inputVbase)) { // si pas un nombre
 
     cloneResponse(input.value, `Ceci n'est pas un nombre`)
-    document.body.classList.add('wrong-state')
+    document.body.classList.add('wrong-state') // anime erreur
 
-  } else if (inputNumber < 0 || inputNumber > 100) {
+  } else if (inputVbase < 0 || inputVbase > 100) { //si n'est pas entre 0 et 100
 
     cloneResponse(input.value, `Le nombre doit être compris entre 0 et 100.`)
-    document.body.classList.add('wrong-state')
+    document.body.classList.add('wrong-state') // anime erreur
 
-  } else if (inputNumber < mysteryNumber) {
+} else if (inputVbase < mysteryNumber) { // si plus petit que mysteryNumber
 
-    cloneResponse(input.value, `Trop petit.`)
+    cloneResponse(inputVbase, `Trop petit.`)
+    if (variateur === 0) {
+      variateur = 1
+      addOrSou.innerHTML = `Phase d'addition`
+    } else if (variateur === 1) {
+      variateur = 0
+      addOrSou.innerHTML = `Phase de soustraction`
+    }
+    Vbase = inputVbase
+    baliseVbase.innerHTML = `Valeur de base : ${Vbase}` //refresh affichage Vbase
 
-  } else if (inputNumber > mysteryNumber) {
+  } else if (inputVbase > mysteryNumber) { // si plus grand que mysteryNumber
 
-    cloneResponse(input.value, `Trop grand.`)
+    cloneResponse(inputVbase, `Trop grand.`)
+    if (variateur === 0) {
+      variateur = 1
+      addOrSou.innerHTML = `Phase d'addition`
+    } else if (variateur === 1) {
+      variateur = 0
+      addOrSou.innerHTML = `Phase de soustraction`
+    }
+    Vbase = inputVbase
+    baliseVbase.innerHTML = `Valeur de base : ${Vbase}` //refresh affichage Vbase
 
-  } else if (inputNumber === mysteryNumber) {
+  } else if (inputVbase === mysteryNumber) { // si égal à mysteryNumber
 
-    cloneResponse(input.value, `EXACT!!!`)
+    cloneResponse(inputVbase, `EXACT!!!`)
+    if (variateur === 0) {
+      variateur = 1
+      addOrSou.innerHTML = `Phase d'addition`
+    } else if (variateur === 1) {
+      variateur = 0
+      addOrSou.innerHTML = `Phase de soustraction`
+    }
+    Vbase = inputVbase
+    baliseVbase.innerHTML = `Valeur de base : ${Vbase}` //refresh affichage Vbase
   }
 
   input.value = ''
