@@ -4,7 +4,7 @@ body ,body * {
     margin :0;
     box-sizing: border-box;
     position: relative;
-    background: center , contain ,  no-repeat url("1.jpeg");
+    background: no-repeat url("1.jpeg");
  }
 .flex-center {
    display: flex; 
