@@ -16,14 +16,16 @@ body, html {
    justify-content: center;
    align-items: center;
 }
+
 h1 {
     font-size: 50px;
     color: #97808040; 
     text-align: center;
     padding: 0 20px;
-    font-family: Russo;
+    font-family: 'Russo';
     
 }
+
 h2 {
   font-size: 48px;
 }
@@ -36,6 +38,7 @@ p span {
   border-radius: 16px;
   padding: 16px;
 }
+
 
 .bounce {
   animation: bounce-anim 1s cubic-bezier(0.41, 1.46, 0.35, 0.9);
