@@ -6,7 +6,6 @@ body ,body * {
     position: relative;
 }
 body {
-    #fs-toggle:not(:fullscreen)
     background-image:url("1.jpeg");
     min-height: 100vh;
     font-family: 'Roboto condensed', sans-serif; 
@@ -20,7 +19,7 @@ body {
 }
 h1 {
     font-size: 96px;
-    font-color:white;
+    color:white;
     
 }
 h2 {
