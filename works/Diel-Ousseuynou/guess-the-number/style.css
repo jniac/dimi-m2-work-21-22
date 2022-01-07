@@ -17,7 +17,7 @@ body {
   align-items: center;
 }
 body.wrong-state {
-  background-color: red;
+  background: red;
   animation-name: wrong;
   animation-duration: 1.2s;
 }
