@@ -22,7 +22,7 @@ body.wrong-state {
   animation-duration: 1.2s;
 }
 
-input {
+/*input {
   background-color: #fff3;
   font-family: inherit;
   border: none;
@@ -42,7 +42,7 @@ div.response span.input {
 }
 div.response span.comment {
   font-style: italic;
-}
+}*/
 
 #canvas {
     cursor: crosshair;
