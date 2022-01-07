@@ -46,6 +46,7 @@ div.response span.comment {
 
 #canvas {
     display: flex;
+    justify-content: left;
     border: none;
     border-top: 1px rgba(66, 0, 0, 0.561) solid;
     border-left: 1px rgba(66, 0, 0, 0.561) solid;
