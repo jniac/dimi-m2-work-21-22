@@ -1,9 +1,13 @@
 var Vbase = 0
+var variateur = 0
 
 const mysteryNumber = Math.round(Math.random() * 100)
 
 const baliseVbase = document.querySelector('h2.baliseVbase')
 baliseVbase.innerHTML = `Valeur de base : ${Vbase}`
+
+const addOrSou = document.querySelector('h3.addOrSou')
+addOrSou.innerHTML = `Phase d'addition`
 
 const response = document.querySelector('div.response')
 response.remove()
@@ -17,7 +21,7 @@ const cloneResponse = (inputValue, commentValue) => {
 
 const submit = () => {
   const input = document.querySelector('input')
-  const inputNumber = parseFloat(input.value)
+  const inputNumber = Math.abs ( parseFloat(input.value) )
 
   var inputVbase = Vbase + inputNumber
 
