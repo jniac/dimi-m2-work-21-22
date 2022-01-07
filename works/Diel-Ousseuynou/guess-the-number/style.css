@@ -59,6 +59,6 @@ div.card {
 display: flex;
 position:relative;
 flex-direction: column;
-justify-content: right;
-left: 500px;
+justify-content: left;
+size: 500px;
 }
