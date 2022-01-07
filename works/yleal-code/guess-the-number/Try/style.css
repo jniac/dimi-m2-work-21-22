@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Gemunu+Libre:wght@200&display=swap');
-body ,body * {
-    margin :0;
-    box-sizing: border-box;
-    position: relative;
-    background-image:url("1.jpeg");
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+body, html {
+ 
+  background-image: url("1.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .flex-center {
@@ -12,15 +15,13 @@ body ,body * {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-
-
 }
 h1 {
-    font-size: 40px;
-    background-color:rgb(41, 0, 0);
-    color: #03030347; 
+    font-size: 50px;
+    color: #f5b2b247; 
     text-align: center;
     padding: 0 20px;
+    font-family: Russo;
     
 }
 h2 {
