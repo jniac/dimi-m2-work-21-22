@@ -6,8 +6,11 @@ body ,body * {
     position: relative;
 }
 body {
-    background-image:url("1.jpeg"), no-repeat;
-    
+    background-image:url("1.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
     height: 90vh;
     font-family: 'Roboto condensed', sans-serif; 
     text-align: center;
