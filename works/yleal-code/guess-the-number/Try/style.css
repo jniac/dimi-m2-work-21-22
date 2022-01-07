@@ -6,7 +6,7 @@ body ,body * {
     position: relative;
 }
 body {
-    background-image:url("1.jpeg") no-repeat center center fixed;
+    background-image:url("1.jpeg") no-repeat;
     font-family: 'Roboto condensed', sans-serif; 
     text-align: center;
 }
