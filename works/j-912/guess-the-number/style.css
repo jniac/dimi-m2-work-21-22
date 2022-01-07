@@ -1,4 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url(anim.css);
 
 body, body * {
@@ -42,23 +42,4 @@ div.response span.input {
 }
 div.response span.comment {
   font-style: italic;
-}*/
-
-@import url(../../../common/css/style.css);
-
-body {
-  background-color: darkorange;
-  --token-size: 96px;
-}
-
-div.number-token {
-  position: absolute;
-  width: var(--token-size);
-  height: var(--token-size);
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.6em;
 }
