@@ -6,9 +6,9 @@ body ,body * {
     position: relative;
 }
 body {
-    background-image:url("1.jpeg");
-    background-repeat: no-repeat;
-    height: 300vh;
+    background-image:url("1.jpeg"), no-repeat;
+    
+    height: 90vh;
     font-family: 'Roboto condensed', sans-serif; 
     text-align: center;
 }
