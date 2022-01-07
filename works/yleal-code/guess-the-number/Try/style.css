@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Gemunu+Libre:wght@200&display=swap');
-body ,body * {
-    margin :0;
-    box-sizing: border-box;
-    position: relative;
-    background-color:black;
- }
+body {
+  margin-top : 0px;
+  margin-left:0px;
+   background-image:url(1.jpeg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position:center center;
+   }
 .flex-center {
    display: flex; 
    flex-direction: column;
