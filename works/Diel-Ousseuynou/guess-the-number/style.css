@@ -22,7 +22,7 @@ body.wrong-state {
   animation-duration: 1.2s;
 }
 
-input {
+/*input {
   background-color: #fff3;
   font-family: inherit;
   border: none;
@@ -42,18 +42,21 @@ div.response span.input {
 }
 div.response span.comment {
   font-style: italic;
-}
-body, div.canvas {
+}*/
 
-}
 #canvas {
-    cursor: crosshair;
     border: none;
     border-top: 1px rgba(66, 0, 0, 0.561) solid;
     border-left: 1px rgba(66, 0, 0, 0.561) solid;
     background: linear-gradient(135deg,#ff00006b 0%, #ff0000da 100%);
-    position: relative ;
-    left: 300px;
+    position: relative; 
+    bottom: 400px;
     height: 200px;
     width: 300px;
+}
+div.card {
+position:relative;
+flex-direction: column;
+justify-content: right;
+left: 500px;
 }
