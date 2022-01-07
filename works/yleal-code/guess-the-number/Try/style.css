@@ -58,7 +58,11 @@ footer , p {
   
   position: relative;
   justify-content: center;
-  margin-bottom: 10px;
-  background-color: #45a1ff;
+  margin-top : 13%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 196px;
+  height : 45px;
+  background-color:#97808040;
   color: #fff;
 }
