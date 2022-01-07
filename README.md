@@ -5,6 +5,7 @@ Projet collaboratif présentant les travaux des étudiants.
 ## Liens
 - [Page des travaux (github.io)](https://jniac.github.io/dimi-m2-work-21-22/)
 - [Démos (github.io)](https://jniac.github.io/dimi-m2-work-21-22/demos)
+- [brief: "Guess The Number"](guess-the-number.md)
 
 Autres
 - [Projet start (github)](https://github.com/jniac/dimi-m2-start-21-22)

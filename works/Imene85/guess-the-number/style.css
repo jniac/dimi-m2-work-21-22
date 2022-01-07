@@ -8,7 +8,7 @@ body, body * {
 }
 
 body {
-  background-color: rgb(167, 211, 255);
+  background-color: lightslategrey;
   min-height: 100vh;
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
@@ -23,7 +23,7 @@ body.wrong-state {
 }
 
 input {
-  background-color: rgba(212, 204, 255, 0.2);
+  background-color: #fff3;
   font-family: inherit;
   border: none;
   padding: 8px 16px;
@@ -37,9 +37,7 @@ div.response {
   border-radius: 4px;
   margin-top: 8px;
 }
-div.response span.input {
-  padding: 8px;
-}
-div.response span.comment {
+
+div.response span.result {
   font-style: italic;
 }
