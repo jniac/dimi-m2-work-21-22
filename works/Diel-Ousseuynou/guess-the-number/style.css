@@ -43,9 +43,7 @@ div.response span.input {
 div.response span.comment {
   font-style: italic;
 }
-body, div.canvas {
 
-}
 #canvas {
     cursor: crosshair;
     border: none;
