@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Gemunu+Libre:wght@200&display=swap');
+body ,body * {
+    margin :0;
+    box-sizing: border-box;
+    position: relative;
+}
+body {
+    background-image:url("1.jpeg");
+    min-height: 100vh;
+    font-family: 'Roboto condensed', sans-serif; 
+    text-align: center;
+}
+.flex-center {
+   display: flex; 
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+h1 {
+    font-size: 96px;
+    
+}
+h2 {
+  font-size: 48px;
+}
+
+p span {
+  font-family: 'Inconsolata', monospace;
+  display: block;
+  background-color: #ff572247;
+  border: solid 2px #ff5722;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.bounce {
+  animation: bounce-anim 1s cubic-bezier(0.41, 1.46, 0.35, 0.9);
+}
+
+@keyframes bounce-anim {
+  from {
+    transform: rotate(-30deg) scale(0%);
+  }
+
+  to {
+    transform: rotate(0deg) scale(100%);
+  }
+}
