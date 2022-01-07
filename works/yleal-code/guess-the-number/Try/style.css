@@ -55,9 +55,10 @@ p span {
 }
 
 footer {
-  display: flex;
+  
+  position: absolute;
   justify-content: center;
-  padding: 5px;
+  padding: 95px;
   background-color: #45a1ff;
   color: #fff;
 }
