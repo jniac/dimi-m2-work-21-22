@@ -8,9 +8,7 @@ body, body * {
 }
 
 body {
-  /*background-color: rgb(50, 243, 233);*/
-  background-image: url(asset/img.svg);
-
+  background-color: lightslategrey;
   min-height: 100vh;
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
@@ -18,18 +16,30 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* Ici un style particulier, indiquant une "erreur" de saisie. */
 body.wrong-state {
-  background: red;
+  background-color: red;
   animation-name: wrong;
   animation-duration: 1.2s;
 }
 
+input,
+button {
+  margin-top: 4px;
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px white;
+  font-family: inherit;
+}
+
 input {
   background-color: #fff3;
-  font-family: inherit;
   border: none;
   padding: 8px 16px;
   text-align: center;
+  color: white;
 }
 
 div.response {
@@ -37,11 +47,16 @@ div.response {
   align-items: center;
   border: solid 1px white;
   border-radius: 4px;
-  margin-top: 8px;
+  margin-top: 4px;
+  padding: 2px;
 }
 div.response span.input {
   padding: 8px;
+  background-color: white;
+  border-radius: 2px;
 }
 div.response span.comment {
+  padding: 8px;
   font-style: italic;
 }
+

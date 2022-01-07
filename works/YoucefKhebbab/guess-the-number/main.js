@@ -6,7 +6,7 @@ response.remove()
 const cloneResponse = (inputValue, commentValue) => {
   const clone = response.cloneNode(true)
   document.body.append(clone)
-  clone.querySelector('span.input').innerHTML = inputValue
+  clone.querySelector('span.input').innerHTML = inputValue || '&nbsp;'
   clone.querySelector('span.comment').innerHTML = commentValue
 }
 
@@ -18,25 +18,25 @@ const submit = () => {
 
   if (isNaN(inputNumber)) {
 
-    cloneResponse(input.value, `This isn't a number`)
+    cloneResponse(input.value, `Ceci n'est pas un nombre`)
     document.body.classList.add('wrong-state')
 
-  } else if (inputNumber < 0 || inputNumber > 100) {
+  } else if (inputNumber < 0 || inputNumber > 100) {
 
     cloneResponse(input.value, `Le nombre doit être compris entre 0 et 100.`)
     document.body.classList.add('wrong-state')
 
   } else if (inputNumber < mysteryNumber) {
 
-    cloneResponse(input.value, `Too small.`)
+    cloneResponse(input.value, `Trop petit.`)
 
   } else if (inputNumber > mysteryNumber) {
 
-    cloneResponse(input.value, `Too big.`)
+    cloneResponse(input.value, `Trop grand.`)
 
   } else if (inputNumber === mysteryNumber) {
 
-    cloneResponse(input.value, `CONGRATS !`)
+    cloneResponse(input.value, `EXACT!!!`)
   }
 
   input.value = ''
@@ -51,3 +51,7 @@ document.body.onkeydown = (event) => {
     submit()
   }
 }
+
+
+
+
