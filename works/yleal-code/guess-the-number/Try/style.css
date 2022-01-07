@@ -18,8 +18,9 @@ body {
    align-items: center;
 }
 h1 {
-    font-size: 30px;
+    font-size: 10px;
     background-color:white;
+    color: red; 
     text-align: center;
     
 }
