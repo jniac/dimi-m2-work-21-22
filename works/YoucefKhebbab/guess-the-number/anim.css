@@ -1,0 +1,20 @@
+@keyframes wrong {
+  0% {
+    transform: translateX(-32px)
+  }
+  16% {
+    transform: translateX(16px)
+  }
+  32% {
+    transform: translateX(-8px)
+  }
+  48% {
+    transform: translateX(4px)
+  }
+  64% {
+    transform: translateX(-2px)
+  }
+  80% {
+    transform: translateX(0)
+  }
+}

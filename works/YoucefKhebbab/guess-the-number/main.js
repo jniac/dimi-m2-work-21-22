@@ -1,15 +1,12 @@
-const Vbase = 0
-
 const mysteryNumber = Math.round(Math.random() * 100)
 
 const response = document.querySelector('div.response')
 response.remove()
 
-const cloneResponse = (inputValue, commentValue, baseValue) => {
+const cloneResponse = (inputValue, commentValue) => {
   const clone = response.cloneNode(true)
   document.body.append(clone)
-  clone.querySelector('h2.Vbase').innerHTML = baseValue
-  clone.querySelector('span.input').innerHTML = inputValue
+  clone.querySelector('span.input').innerHTML = inputValue || '&nbsp;'
   clone.querySelector('span.comment').innerHTML = commentValue
 }
 
@@ -24,7 +21,7 @@ const submit = () => {
     cloneResponse(input.value, `Ceci n'est pas un nombre`)
     document.body.classList.add('wrong-state')
 
-  } else if (inputNumber < 0 || inputNumber > 100) {
+  } else if (inputNumber < 0 || inputNumber > 100) {
 
     cloneResponse(input.value, `Le nombre doit être compris entre 0 et 100.`)
     document.body.classList.add('wrong-state')
@@ -54,3 +51,7 @@ document.body.onkeydown = (event) => {
     submit()
   }
 }
+
+
+
+
