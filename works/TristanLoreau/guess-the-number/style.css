@@ -12,7 +12,6 @@ body {
   --token-size: 96px;
 }
 
-
 div.number-token {
   position: absolute;
   width: var(--token-size);

@@ -6,7 +6,7 @@ const randomCloneNumberTokenDiv = (n) => {
   const clone = numberTokenDiv.cloneNode(true)
   document.body.append(clone)
 
-  const x = Math.floor(Math.random() * (window.innerWidth - 96))
+  const x = Math.floor(Math.random() * (window.innerWidth - 30))
   const y = Math.floor(Math.random() * window.innerHeight)
   clone.style.left = `${x}px`
   clone.style.top = `${y}px`
