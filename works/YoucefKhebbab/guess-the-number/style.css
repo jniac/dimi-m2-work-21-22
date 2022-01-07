@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@383&display=swap");
+@import url(dialog.css);
+@import url(inputs.css);
+@import url(lock.css);
 
 body,
 body * {
@@ -14,6 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
+  font-family: "Roboto Mono", monospace;
 }
 
 main {
@@ -41,20 +46,4 @@ footer > div {
 }
 footer > div + div {
   margin-left: var(--gutter);
-}
-
-footer .dialog {
-  flex: 3 0 0;
-}
-
-footer .inputs {
-  flex: 1 0 0;
-}
-
-footer .lock {
-  flex: 2 0 0;
-  aspect-ratio: 1/1;
-  background-image: url(assets/lock.jpg);
-  background-size: cover;
-  border: solid 5px white;
 }
