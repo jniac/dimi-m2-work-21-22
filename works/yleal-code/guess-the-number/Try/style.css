@@ -2,20 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Gemunu+Libre:wght@200&display=swap');
 body, html {
   height: 100%;
-}
-
-.bg {
-  /* The image used */
   background-image: url("1.jpeg");
-
-  /* Full height */
   height: 70%;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .flex-center {
    display: flex; 
    flex-direction: column;
