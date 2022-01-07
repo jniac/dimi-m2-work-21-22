@@ -55,10 +55,3 @@ div.response span.comment {
     height: 200px;
     width: 300px;
 }
-div.card {
-display: flex;
-position:relative;
-flex-direction: column;
-justify-content: left;
-size: 500px;
-}
