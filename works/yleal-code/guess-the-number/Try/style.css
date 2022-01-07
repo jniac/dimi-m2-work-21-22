@@ -54,7 +54,7 @@ p span {
   }
 }
 
-footer {
+footer , p {
   
   position: absolute;
   justify-content: center;
