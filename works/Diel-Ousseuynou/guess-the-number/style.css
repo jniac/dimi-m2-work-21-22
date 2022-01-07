@@ -43,3 +43,15 @@ div.response span.input {
 div.response span.comment {
   font-style: italic;
 }
+#canvas {
+    cursor: crosshair;
+    border: none;
+    border-top: 1px rgba(66, 0, 0, 0.561) solid;
+    border-left: 1px rgba(66, 0, 0, 0.561) solid;
+    background: linear-gradient(135deg,#ff00006b 0%, #ff0000da 100%);
+    box-shadow: 0 10px 15px black;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;}
