@@ -1,44 +1,53 @@
-console.log('Hello user!')
-console.log('Try to guess the mystery number.')
-console.log('Use "submit(x)" to submit a number.')
-
 const mysteryNumber = Math.round(Math.random() * 100)
 
-const submit = (x) => {
+const response = document.querySelector('div.response')
+response.remove()
 
-  x = parseFloat(x)
+const cloneResponse = (inputValue, commentValue) => {
+  const clone = response.cloneNode(true)
+  document.body.append(clone)
+  clone.querySelector('span.input').innerHTML = inputValue
+  clone.querySelector('span.comment').innerHTML = commentValue
+}
 
-  if (Number.isNaN(x)) {
-    console.log('Wrong input, please give a number.')
-    document.body.innerHTML = '<h1 class="bounce">⚠️</h1>'
-    document.body.style.backgroundColor = 'red'
+const submit = () => {
+  const input = document.querySelector('input')
+  const inputNumber = parseFloat(input.value)
 
-  } else if (x < 0 || x > 100) {
-    console.log('Number should be between 0 & 100.')
-    document.body.innerHTML = '<h1 class="bounce">Number should be between 0 & 100.</h1>'
-    document.body.style.backgroundColor = 'red'
+  document.body.classList.remove('wrong-state')
 
-  } else if (x < mysteryNumber) {
-    console.log('Too small.')
-    document.body.innerHTML = '<h1 class="bounce">Too small.</h1>'
-    document.body.style.backgroundColor = '#8e7cdb'
+  if (isNaN(inputNumber)) {
 
-  } else if (x > mysteryNumber) {
-    console.log('Too big.')
-    document.body.innerHTML = '<h1 class="bounce">Too big.</h1>'
-    document.body.style.backgroundColor = '#db7cb5'
+    cloneResponse(input.value, `This isn't a number`)
+    document.body.classList.add('wrong-state')
 
-  } else if (x == mysteryNumber) {
-    console.log('Hurrah!')
-    document.body.innerHTML = '<h1 class="bounce">Hurrah!</h1>'
-    document.body.style.backgroundColor = '#97ffe7'
+  } else if (inputNumber < 0 || inputNumber > 100) {
+
+    cloneResponse(input.value, `Le nombre doit être compris entre 0 et 100.`)
+    document.body.classList.add('wrong-state')
+
+  } else if (inputNumber < mysteryNumber) {
+
+    cloneResponse(input.value, `Too small.`)
+
+  } else if (inputNumber > mysteryNumber) {
+
+    cloneResponse(input.value, `Too big.`)
+
+  } else if (inputNumber === mysteryNumber) {
+
+    cloneResponse(input.value, `CONGRATS !`)
   }
+
+  input.value = ''
 }
 
-const cheat = () => {
-  console.log(`The mystery number is ${mysteryNumber}`)
+document.querySelector('button#submit').onclick = () => {
+  submit()
 }
 
-const distance = (x, y) => {
-  return 
+document.body.onkeydown = (event) => {
+  if (event.key === 'Enter') {
+    submit()
+  }
 }

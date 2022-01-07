@@ -1,11 +1,14 @@
+const Vbase = 0
+
 const mysteryNumber = Math.round(Math.random() * 100)
 
 const response = document.querySelector('div.response')
 response.remove()
 
-const cloneResponse = (inputValue, commentValue) => {
+const cloneResponse = (inputValue, commentValue, baseValue) => {
   const clone = response.cloneNode(true)
   document.body.append(clone)
+  clone.querySelector('h2.Vbase').innerHTML = baseValue
   clone.querySelector('span.input').innerHTML = inputValue
   clone.querySelector('span.comment').innerHTML = commentValue
 }
