@@ -1,0 +1,15 @@
+footer .lock {
+  flex: 2 0 0;
+  aspect-ratio: 1/1;
+  background-image: url(assets/lock.jpg);
+  background-size: cover;
+  border: solid 5px white;
+}
+
+footer .lock .digits {
+  position: absolute;
+  top: 131px;
+  left: 108px;
+  font-size: 18px;
+  font-weight: 900;
+}

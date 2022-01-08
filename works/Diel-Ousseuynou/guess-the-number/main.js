@@ -18,7 +18,7 @@ const submit = () => {
 
   if (isNaN(inputNumber)) {
 
-    cloneResponse(input.value, `This isn't a number`)
+    cloneResponse(input.value, `Ceci n'est pas un nombre`)
     document.body.classList.add('wrong-state')
 
   } else if (inputNumber < 0 || inputNumber > 100) {
@@ -28,15 +28,15 @@ const submit = () => {
 
   } else if (inputNumber < mysteryNumber) {
 
-    cloneResponse(input.value, `Too small.`)
+    cloneResponse(input.value, `Trop petit.`)
 
   } else if (inputNumber > mysteryNumber) {
 
-    cloneResponse(input.value, `Too big.`)
+    cloneResponse(input.value, `Trop grand.`)
 
   } else if (inputNumber === mysteryNumber) {
 
-    cloneResponse(input.value, `CONGRATS !`)
+    cloneResponse(input.value, `EXACT!!!`)
   }
 
   input.value = ''

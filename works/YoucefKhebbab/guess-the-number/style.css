@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@383&display=swap");
+@import url(dialog.css);
+@import url(inputs.css);
+@import url(lock.css);
+
+body,
+body * {
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-family: "Roboto Mono", monospace;
+}
+
+main {
+  --gutter: 24px;
+  width: 960px;
+  height: 540px;
+  padding: var(--gutter);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  background-image: url(assets/bg.jpg);
+  background-size: cover;
+}
+
+footer {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+footer > div {
+  min-height: 100px;
+  background-color: white;
+}
+footer > div + div {
+  margin-left: var(--gutter);
+}

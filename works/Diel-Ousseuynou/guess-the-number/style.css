@@ -8,7 +8,7 @@ body, body * {
 }
 
 body {
-  background-color: rgb(167, 211, 255);
+  background-color: rgb(50, 243, 233);
   min-height: 100vh;
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
@@ -17,13 +17,13 @@ body {
   align-items: center;
 }
 body.wrong-state {
-  background-color: red;
+  background: red;
   animation-name: wrong;
   animation-duration: 1.2s;
 }
 
-input {
-  background-color: rgba(212, 204, 255, 0.2);
+/*input {
+  background-color: #fff3;
   font-family: inherit;
   border: none;
   padding: 8px 16px;
@@ -42,4 +42,16 @@ div.response span.input {
 }
 div.response span.comment {
   font-style: italic;
+}*/
+
+#canvas {
+    display: flex;
+    flex-direction: initial; 
+    border: none;
+    border-top: 1px rgba(66, 0, 0, 0.561) solid;
+    border-left: 1px rgba(66, 0, 0, 0.561) solid;
+    background: linear-gradient(135deg,#ff00006b 0%, #ff0000da 100%);
+    position: relative; 
+    height: 200px;
+    width: 300px;
 }
