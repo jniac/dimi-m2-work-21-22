@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+body {
+    background-color: #eee;
+    padding: 64px;
+}
+main {
+    width: 400px;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 16px;
+    background-color: white;
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 24px;
+    text-align: center;
+}
+.output {
+    margin-top: 4px;
+    padding: 16px;
+    text-align: center;
+    border: solid 1px #ddd;
+    border-radius: 4px;
+}
+.output span.index {
+    opacity: .25;
+}
+.output span.number {
+    font-weight: bold;
+}
