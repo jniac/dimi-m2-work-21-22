@@ -1,45 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url(anim.css);
-
-body, body * {
-  margin: 0;
-  box-sizing: border-box;
-  position: relative;
+body{
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
 }
-
-body {
-  background-color: lightslategrey;
-  min-height: 100vh;
-  font-family: 'Roboto Condensed', sans-serif;
+form{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-body.wrong-state {
-  background-color: red;
-  animation-name: wrong;
-  animation-duration: 1.2s;
-}
-
-input {
-  background-color: #fff3;
-  font-family: inherit;
-  border: none;
-  padding: 8px 16px;
+  justify-content: space-between;
   text-align: center;
+  padding : 10px 10px;
 }
 
-div.response {
+form>input{
+  margin: 5px 0px;
+  text-decoration: inherit;
+  border:none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 10px;
+  border: 2px solid #9c88ff;
+  color: #9c88ff;
+  font-size: 3rem;
+  align-items:center;
+  font-weight: 600;
+  max-width: 100px;
+  text-align: center;
+  -webkit-appearance: none;
+
+}
+.btn{
+  margin: 5px 0px;
+  text-decoration: inherit;
+  border:none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 10px;
+  border: 3px solid #9c88ff;
+  color: #9c88ff;
+  font-size: 2rem;
+  align-items:center;
+  font-weight: 600;
+  max-width: 300px;
+  text-align: center;
+  -webkit-appearance: none;
+
+
+}
+.btn:hover{
+  color: white;
+  background-color: #9c88ff;
+}
+.carousel{
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  border: solid 1px white;
-  border-radius: 4px;
-  margin-top: 8px;
 }
-div.response span.input {
-  padding: 8px;
+
+.carousel>img{
+  max-width: 300px;
+  height: auto;
+  border-radius: 10%;
+  margin-bottom: 10px;
 }
-div.response span.comment {
-  font-style: italic;
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }
