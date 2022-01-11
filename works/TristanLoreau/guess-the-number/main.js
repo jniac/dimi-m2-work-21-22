@@ -1,21 +1,44 @@
-const numberTokenDiv = document.querySelector('div.number-token')
-numberTokenDiv.remove()
-
-const randomCloneNumberTokenDiv = (n) => {
-  const clone = numberTokenDiv.cloneNode(true)
-  document.body.append(clone)
-
-  const x = Math.floor(Math.random() * (window.innerWidth - 96))
-  const y = Math.floor(Math.random() * window.innerHeight)
-  clone.style.left = `${x}px`
-  clone.style.top = `${y}px`
-  clone.innerHTML = `#${n}`
+const cards = document.querySelectorAll(".card");
+cards.forEach((card) => card.addEventListener("click", flip));
+var isFlipped = false;
+var firstCard;
+var secondCard;
+function flip() {
+    this.classList.add("flip");
+    if (!isFlipped) {
+        isFlipped = true;
+        firstCard = this;
+    }
+    else {
+        secondCard = this;
+        checkIt();
+    }
 }
-
-const generateTokens = () => {
-  for (let i = 0; i < 100; i++) {
-    randomCloneNumberTokenDiv(i + 1)
-  }
+function checkIt() {
+    if (firstCard.dataset.image === secondCard.dataset.image) { success(); }
+    else { fail(); }
 }
-
-generateTokens()
+function success() {
+    firstCard.removeEventListener("click", flip);
+    secondCard.removeEventListener("click", flip);
+    reset();
+    document.querySelector('.winner').style.visibility = 'visible'
+}
+var fail = () => {
+    setTimeout(() => {
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
+        reset();
+    }, 1000)
+}
+function reset() {
+    isFlipped = false;
+    firstCard = null;
+    secondCard = null;
+}
+(function shuffle() {
+    cards.forEach((card) => {
+        var index = Math.floor(Math.random() * 16);
+        card.style.order = index;
+    })
+})();

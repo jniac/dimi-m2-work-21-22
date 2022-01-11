@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+
+body{
+    background-image: url(images/fond6.png);
+    background-repeat: no-repeat;
+    background-color: black;
+    color: #21252900 !important;
+}
+
+#jeu{
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+   
+}
+
+#jeu ul{
+    display: flex;
+    justify-content: center;
+    margin: 80px auto 0 auto;
+}
+
+#jeu li{
+    list-style: none;
+    font-size: 6em;
+    margin:5px;
+}
+
+main {
+    width: 400px;
+    margin: 0 auto;
+    color : white;
+}
+
+#titre{
+    text-align: center;
+    position: relative;
+    margin: 150px auto 0 auto;
+    width: 400px;
+    color : white;
+}
+
+#case{
+    margin: 50px auto 0 auto;
+}
+
+input {
+    width: 100%;
+    padding: 16px;
+    background-color: rgb(144, 12, 12);
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 24px;
+    text-align: center;
+}
+.output {
+    margin-top: 20px;
+    padding: 16px;
+    text-align: center;
+    border: solid 1px #ddd;
+    border-radius: 4px;
+}
+.output span.index {
+    opacity: .25;
+}
+.output span.number {
+    font-weight: bold;
+}
+
+#victoire{
+    padding: 10px;
+    position: absolute;
+    border: 1px solid white;
+    border-radius: 10px;
+    bottom: -80px;
+    left: 20%;
+    display: none;
+}
+
+#defaite{
+    padding: 10px;
+    position: absolute;
+    border: 1px solid white;
+    border-radius: 10px;
+    bottom: -80px;
+    left: 20%;
+    display: none;
+}
+
+#b1, #b13{
+    background-image: url(images/gardien.png) !important;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+.fa-user-circle{
+    background-image: url(images/utilisateur.png) !important;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    display: block;
+    background-repeat: no-repeat;
+}
+
