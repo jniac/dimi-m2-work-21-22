@@ -24,7 +24,7 @@ form>input{
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 2px solid #9c88ff;
   color: #9c88ff;
   font-size: 3rem;
@@ -44,8 +44,8 @@ form>input{
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  border-radius: 10px;
-  border: 3px solid #9c88ff;
+  border-radius: 5px;
+  border: 2px solid #9c88ff;
   color: #9c88ff;
   font-size: 2rem;
   align-items:center;
@@ -70,7 +70,7 @@ form>input{
 .carousel>img{
   max-width: 300px;
   height: auto;
-  border-radius: 10%;
+  border-radius: 5%;
   margin-bottom: 10px;
 }
 
