@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body{
   display: block;
   align-items: center;
   justify-content: space-between;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  font-weight: 800;
+  font-weight: 600;
+  background-color: #F7F2E8;
 }
 form{
   display: flex;
@@ -25,9 +28,10 @@ form>input{
   -moz-box-shadow: none;
   box-shadow: none;
   border-radius: 5px;
-  border: 2px solid #9c88ff;
-  color: #9c88ff;
-  font-size: 3rem;
+  border: 2px solid #FDCCBA;
+  color: #000000;
+  padding: 2px;
+  font-size: 2rem;
   align-items:center;
   font-weight: 600;
   max-width: 100px;
@@ -36,7 +40,10 @@ form>input{
 
 }
 .btn{
-  margin: 5px 0px;
+  margin-top: 30px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
   text-decoration: inherit;
   border:none;
   background-image: none;
@@ -45,8 +52,8 @@ form>input{
   -moz-box-shadow: none;
   box-shadow: none;
   border-radius: 5px;
-  color: #9c88ff;
-  font-size: 2rem;
+  color: #000000;
+  font-size: 22px;
   align-items:center;
   font-weight: 600;
   max-width: 300px;
@@ -55,6 +62,11 @@ form>input{
 
 
 }
+
+.name {
+  padding: 20px;
+}
+
 .btn:hover{
   color: #251866;
 }
@@ -68,7 +80,7 @@ form>input{
 .carousel>img{
   max-width: 300px;
   height: auto;
-  border-radius: 5%;
+  border-radius: 2%;
   margin-bottom: 10px;
 }
 

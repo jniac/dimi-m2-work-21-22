@@ -1,18 +1,15 @@
 <head>
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-</style>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button id="begin" onclick="start()" class="btn">Démarrer le jeu !</button>  <div>
+<button id="begin" onclick="start()" class="btn">Devine son âge</button>  <div>
     <div class="carousel">
       <h2 id="output"></h2>
       <img src="https://www.cine974.com/images/personnes/lily-collins-rM4GPL9C.jpg">
-      <span>Lily Collins</span>
+      <span id="name">Lily Collins</span>
     </div>
     <form>
-      <input type="number" id="guess" onkeyUp="guessTheAge()">
+      <input type="number" id="guess" onkeyUp="guessTheAge()" >
       <p id="hiLo"></p>
     </form>
   </div>
