@@ -54,4 +54,4 @@ input.onchange = () => {
   
 }
 
-handleMessage(0, 'hey vite sauve moi')
+handleMessage(0, 'Vite, trouve le bon code !')
