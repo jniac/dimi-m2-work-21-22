@@ -30,12 +30,12 @@ function guessTheAge(){
     message.innerHTML = "Cette célébrité est plus agée !";
   }
   else {
-    document.getElementById("guess").style.color = "#9c88ff";
+    document.getElementById("guess").style.color = "#FDCCBA";
     document.getElementById("guess").readOnly = true;
     message.innerHTML = "C'est la bonne réponse ! Bravo";
     var again = document.getElementById("begin");
     again.style.visibility = "visible";
-    again.innerHTML = "Play again?";
+    again.innerHTML = "Rejouer";
     
   }
   

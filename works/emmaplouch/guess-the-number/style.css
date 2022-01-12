@@ -9,6 +9,7 @@ body{
   font-weight: 600;
   background-color: #F7F2E8;
 }
+
 form{
   display: flex;
   flex-direction: column;
@@ -39,6 +40,7 @@ form>input{
   -webkit-appearance: none;
 
 }
+
 .btn{
   margin-top: 30px;
   margin-right: 0px;
@@ -62,14 +64,6 @@ form>input{
 
 
 }
-
-.name {
-  padding: 20px;
-}
-
-.btn:hover{
-  color: #251866;
-}
 .carousel{
   display: flex;
   flex-direction: column;
@@ -84,14 +78,16 @@ form>input{
   margin-bottom: 10px;
 }
 
+#output{
+  font-size: 22px;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0; 
 }
 
 input[type=number] {
-    -moz-appearance:textfield; /* Firefox */
+    -moz-appearance:textfield; 
 }
