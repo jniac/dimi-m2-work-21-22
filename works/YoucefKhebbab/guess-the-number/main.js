@@ -18,7 +18,9 @@ const handleLock = (lockState = 123) => {
   document.querySelector('.digits .c').innerHTML = lockDigits[0]
   document.querySelector('.digits .d').innerHTML = lockDigits[0]
   document.querySelector('.digits .u').innerHTML = lockDigits[0]
+
 }
+
 
 const fail = () => {
   alert('perdu!')
