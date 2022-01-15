@@ -14,7 +14,7 @@ html {
 body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
-  background-color: rgb(75, 73, 73);
+  background-color: rgb(41, 40, 40);
   /* background-color: #60b347; */
 }
 
@@ -84,7 +84,7 @@ h1 {
 
 .guess {
   background: none;
-  border: 4px solid #eee;
+  border: 4px solid rgb(9, 5, 209);
   font-family: inherit;
   color: inherit;
   font-size: 5rem;
@@ -98,7 +98,7 @@ h1 {
 .btn {
   border: none;
   background-color: #eee;
-  color: #222;
+  color: rgb(20, 29, 145);
   font-size: 2rem;
   font-family: inherit;
   padding: 2rem 3rem;
