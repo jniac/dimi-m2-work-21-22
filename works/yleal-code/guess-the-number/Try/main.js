@@ -30,6 +30,7 @@ const submit = () => {
   if (inputNumber == mysteryNumber) {
     illustration.style.backgroundImage = 'url(assets/exact.png)'
     return
+    prompt("tu as gagné bravo!!!!!");
   }
 }
 
