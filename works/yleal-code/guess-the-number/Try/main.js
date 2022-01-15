@@ -20,7 +20,8 @@ const submit = () => {
   }
 
   if (inputNumber < mysteryNumber) {
-    
+    illustration.style.backgroundImage = 'url(assets/tp.png)'
+    return
   }
 }
 
