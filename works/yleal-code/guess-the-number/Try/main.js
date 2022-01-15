@@ -27,6 +27,10 @@ const submit = () => {
     illustration.style.backgroundImage = 'url(assets/tg.png)'
     return
   }
+  if (inputNumber == mysteryNumber) {
+    illustration.style.backgroundImage = 'url(assets/exact.png)'
+    return
+  }
 }
 
 const hideResult = () => {
