@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url(anim.css);
+
+body, body * {
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  background-color: rgb(216, 149, 255);
+  min-height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ici un style particulier, indiquant une "erreur" de saisie. */
+body.wrong-state {
+  background-color: red;
+  animation-name: wrong;
+  animation-duration: 1.2s;
+}
+
+input,
+button {
+  margin-top: 4px;
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px white;
+  font-family: inherit;
+}
+
+input {
+  background-color: rgb(63, 0, 82);
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  color: white;
+}
+
+div.response {
+  display: flex;
+  align-items: center;
+  border: solid 1px white;
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 2px;
+}
+div.response span.input {
+  padding: 8px;
+  background-color: white;
+  border-radius: 2px;
+}
+div.response span.comment {
+  padding: 8px;
+  font-style: italic;
+}

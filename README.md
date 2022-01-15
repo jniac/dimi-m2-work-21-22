@@ -2,7 +2,14 @@
 
 Projet collaboratif présentant les travaux des étudiants.
 
-[Page en ligne (github.io)](https://jniac.github.io/dimi-m2-work-21-22/)
+## Liens
+- [brief: "Guess The Number"](guess-the-number.md)
+- [Page des travaux (rendus)](https://jniac.github.io/dimi-m2-work-21-22/)
+- [Démos (pour inspiration)](https://jniac.github.io/dimi-m2-work-21-22/demos)
+- [évaluations](https://josephm.fr/students/dimi-m2-fi-21-22)
+
+Autres
+- [Projet start (github)](https://github.com/jniac/dimi-m2-start-21-22)
 
 ## Cloner le projet depuis VSCode
 
@@ -13,7 +20,7 @@ Si le bouton "Clone Git Repository" est présent : cliquer dessus et coller l'ad
 <img height=500 src="https://user-images.githubusercontent.com/11039919/143419613-33b1bdad-5259-4f02-8a34-fd72abe7ca36.png">
 
 Si ce n'est pas le cas :  
-- Afficher "l'invite de commandes" de VSCode Cmd / Ctrl + Shift + P
+- Afficher "l'invite de commandes" de VSCode : `Cmd / Ctrl + Shift + P`
 - Saisir "Clone" & Choisir Git: Clone
 - Saisir l'adresse du projet.
 

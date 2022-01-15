@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!--> <html lang="fr"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Guess The Number</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        <link rel="icon" type="image/png" href="images\dbz.png" />
+        <link rel="stylesheet" href="css/flaticon.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="custom.css" />
+        
+    </head>
+    <body>
+        
+            <div id="titre">
+                <h1>Trouve le nombre mystère</h1>
+                <h2>entre 0 et 100 </h2>
+                <h3>Si le nombre est trop grand, tu vas à droite. Si le nombre est trop petit, tu vas à gauche. Si tu arrives jusqu'aux gardiens, tu meurs !</h3>
+                <h2 id="victoire">Bravo vous avez gagné !</h2>
+                <h2 id="defaite">Vous avez perdue !</h2>
+            </div>
+       
+       
+
+       <section id="jeu">
+            <ul>
+                <li><i id="b1" class="fas fa-bomb"></i></li>
+                <li><i id="b2" class="fas fa-circle"></i></li>
+                <li><i id="b3" class="fas fa-circle"></i></li>
+                <li><i id="b4" class="fas fa-circle"></i></li>
+                <li><i id="b5" class="fas fa-circle"></i></li>
+                <li><i id="b6" class="fas fa-circle"></i></li>
+                <li><i id="b7" class="far fa-user-circle"></i></li>
+                <li><i id="b8" class="fas fa-circle"></i></li>
+                <li><i id="b9" class="fas fa-circle"></i></li>
+                <li><i id="b10" class="fas fa-circle"></i></li>
+                <li><i id="b11" class="fas fa-circle"></i></li>
+                <li><i id="b12" class="fas fa-circle"></i></li>
+                <li><i id="b13" class="fas fa-bomb"></i></li>
+            </ul>
+            <main>
+                <div id="case">
+                <input type="text">
+                <div class="output">
+                    <span class="index"></span>
+                    <span class="number"></span>
+                    <span class="text">Vous devez entrer un nombre</span>
+                </div>
+                </div>
+            </main> 
+       </section> 
+
+        
+        <footer>
+           
+        </footer>
+
+        
+        <script src="monjs.js"></script>		
+        <script src="https://kit.fontawesome.com/811878f6ff.js" crossorigin="anonymous"></script>
+    </body>	
+</html>	
