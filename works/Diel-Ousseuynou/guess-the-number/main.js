@@ -1,53 +1,46 @@
-const mysteryNumber = Math.round(Math.random() * 100)
-
-const response = document.querySelector('div.response')
-response.remove()
-
-const cloneResponse = (inputValue, commentValue) => {
-  const clone = response.cloneNode(true)
-  document.body.append(clone)
-  clone.querySelector('span.input').innerHTML = inputValue
-  clone.querySelector('span.comment').innerHTML = commentValue
+const cards=document.querySelectorAll(".card");
+cards.forEach((card)=>card.addEventListener("click",flip));
+var isFlipped=false;
+var firstCard;
+var secondCard;
+ function flip(){
+    this.classList.add("flip");
+    if(!isFlipped){
+        isFlipped=true;
+        firstCard=this;
+    }
+    else{
+        secondCard=this;
+        checkIt();
+    }
 }
-
-const submit = () => {
-  const input = document.querySelector('input')
-  const inputNumber = parseFloat(input.value)
-
-  document.body.classList.remove('wrong-state')
-
-  if (isNaN(inputNumber)) {
-
-    cloneResponse(input.value, `Ceci n'est pas un nombre`)
-    document.body.classList.add('wrong-state')
-
-  } else if (inputNumber < 0 || inputNumber > 100) {
-
-    cloneResponse(input.value, `Le nombre doit être compris entre 0 et 100.`)
-    document.body.classList.add('wrong-state')
-
-  } else if (inputNumber < mysteryNumber) {
-
-    cloneResponse(input.value, `Trop petit.`)
-
-  } else if (inputNumber > mysteryNumber) {
-
-    cloneResponse(input.value, `Trop grand.`)
-
-  } else if (inputNumber === mysteryNumber) {
-
-    cloneResponse(input.value, `EXACT!!!`)
-  }
-
-  input.value = ''
+function checkIt(){
+   if(firstCard.dataset.image===secondCard.dataset.image)
+    {success();}
+   else
+    {fail();}
 }
-
-document.querySelector('button#submit').onclick = () => {
-  submit()
+function success(){
+    window.open("success.html");
+    firstCard.removeEventListener("click",flip);
+    secondCard.removeEventListener("click",flip);
+    reset();
 }
-
-document.body.onkeydown = (event) => {
-  if (event.key === 'Enter') {
-    submit()
-  }
+var fail=()=>{
+    setTimeout(()=>{
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
+        reset();
+    },1000)
 }
+function reset(){
+    isFlipped=false;
+    firstCard=null;
+    secondCard=null;
+}
+(function shuffle(){
+    cards.forEach((card)=>{
+        var index =Math.floor(Math.random()*16);
+        card.style.order = index;
+    })
+})();
