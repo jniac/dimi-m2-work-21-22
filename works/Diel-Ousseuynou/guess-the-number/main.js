@@ -21,7 +21,7 @@ function checkIt(){
     {fail();}
 }
 function success(){
-    window.open("success.html");
+    window.open("anim.html");
     firstCard.removeEventListener("click",flip);
     secondCard.removeEventListener("click",flip);
     reset();
