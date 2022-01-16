@@ -62,4 +62,4 @@ input.onchange = () => {
   
 }
 
-handleMessage(0, 'Vite, trouve le bon code ! ils disaient qu\'un indice se trouvait dans la salle')
+handleMessage(0, 'Vite, trouve le bon code ! ils disaient qu\'un indice se trouvait dans la salle...')
