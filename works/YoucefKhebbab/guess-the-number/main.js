@@ -1,4 +1,4 @@
-const mysteryNumber = Math.floor(Math.random() * 1000)
+const mysteryNumber = 314
 
 const portraits = [
   'assets/portrait1.png',
@@ -40,6 +40,7 @@ input.onchange = () => {
     return
   }
 
+  
   if (isNaN(inputNumber)) {
     handleMessage(count, 'un nombre connard')
     return
@@ -48,13 +49,16 @@ input.onchange = () => {
   handleLock(inputNumber)
 
   if (inputNumber > mysteryNumber) {
-    handleMessage(count, 'trop grand!!!!')
+    handleMessage(count, 'Trop grand ! Ce n\'est pas le bon code, cherche l\'indice !')
   }
   
   else if (inputNumber < mysteryNumber) {
-    handleMessage(count, 'trop petit!!!!')
+    handleMessage(count, 'Trop petit ! Ce n\'est pas le bon code, cherche l\'indice !')
   }
 
+  else if (inputNumber === mysteryNumber) {
+    handleMessage(count, 'Bien joué bonhomme !!!!')
+  }
   
 }
 
