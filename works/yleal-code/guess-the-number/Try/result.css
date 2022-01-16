@@ -1,7 +1,7 @@
 
 div.screen.result {
   padding: 64px;
-  background-color: aqua;
+  background-color: rgb(35, 29, 68);
   display: flex;
   flex-direction: column;
   justify-content: center;

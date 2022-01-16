@@ -20,6 +20,17 @@ const submit = () => {
   }
 
   if (inputNumber < mysteryNumber) {
+    illustration.style.backgroundImage = 'url(assets/tp.png)'
+    return
+  }
+  if (inputNumber > mysteryNumber) {
+    illustration.style.backgroundImage = 'url(assets/tg.png)'
+    return
+  }
+  if (inputNumber == mysteryNumber) {
+    ("tu as gagné bravo!!!!!");
+    illustration.style.backgroundImage = 'url(assets/exact.png)'
+    return
     
   }
 }
