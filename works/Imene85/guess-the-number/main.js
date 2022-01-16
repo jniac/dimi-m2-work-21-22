@@ -13,15 +13,11 @@ for (var i = 1; i < 100; i++) {
 	} else {
 	    x += 8;
 	}
-	//y += 3;
-    //let mysteryScale = 0.5 + (Math.random() * 0.6);
 
     let clone = document.querySelector('#cadre .carte').cloneNode(true);
 
-    //clone.style.zindex = mysteryZindex;
     clone.style.left = x + "%";
     clone.style.top = y + "%";
-    //clone.style.transform = "scale(" + mysteryScale + ")";
     clone.querySelector('span.number').innerHTML = i + 1;
 
     document.querySelector('#cadre').appendChild(clone);
