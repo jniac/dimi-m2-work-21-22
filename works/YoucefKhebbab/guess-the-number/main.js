@@ -42,7 +42,7 @@ input.onchange = () => {
 
   
   if (isNaN(inputNumber)) {
-    handleMessage(count, 'un nombre connard')
+    handleMessage(count, 'C\'est un cadenas à 3 chiffres...')
     return
   }
 
