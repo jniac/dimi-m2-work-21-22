@@ -1,27 +1,59 @@
 const nbr = Math.round(Math.random()*100)
 const response = document.querySelector('span.result')
 
-document.querySelector('button#submit').onclick = () => {
 
-    const input = document.querySelector('input')
-    const inputNumber = parseFloat(input.value)
-  
-    if ( inputNumber < nbr) {
-        response.innerHTML = '<h1>Too small.</h1>'
-        document.body.style.backgroundColor = '#8e7cdb'
-    }
+let x = 0;
+let y = 0;
 
-    if (inputNumber > nbr) {
-        response.innerHTML = '<h1>Too big.</h1>'
-        document.body.style.backgroundColor = '#db7cdb'
-    }
+for (var i = 1; i < 100; i++) {
+  	
+	if ((i % 12) == 0) {
+		x = 0
+		y += 20
+	} else {
+	    x += 8;
+	}
+	//y += 3;
+    //let mysteryScale = 0.5 + (Math.random() * 0.6);
+
+    let clone = document.querySelector('#cadre .carte').cloneNode(true);
+
+    //clone.style.zindex = mysteryZindex;
+    clone.style.left = x + "%";
+    clone.style.top = y + "%";
+    //clone.style.transform = "scale(" + mysteryScale + ")";
+    clone.querySelector('span.number').innerHTML = i + 1;
+
+    document.querySelector('#cadre').appendChild(clone);
+}
+
+const submit = (el) => {
+
+    const spanNumber = el.querySelector('.number');
+    const inputNumber = parseFloat(spanNumber.innerHTML)
 
 
-    if (inputNumber == nbr) {
+	if (inputNumber < nbr) {
+        el.className = "higher";
+		spanNumber.className = "response"
+		spanNumber.innerHTML = "Higher !!"
+    } else if (inputNumber > nbr) {
+        el.className = "lower";
+		spanNumber.className = "response"
+		spanNumber.innerHTML = "Lower !!"
+    } else if (inputNumber === nbr) {
+		el.className = "win";
+		spanNumber.className = "response"
+		spanNumber.innerHTML = "Winner !!"
         
-        response.innerHTML = '<h1>hurrah !</h1>'
-        document.body.style.backgroundColor = '#97ffe7'
-   }
+    }
+}
 
+
+const cartes = document.querySelectorAll('.carte')
+for (const carte of cartes) {
+    carte.onclick = () => {
+        submit(carte)
+    }
 }
   

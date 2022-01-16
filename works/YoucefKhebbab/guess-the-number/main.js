@@ -1,4 +1,4 @@
-const mysteryNumber = 314
+const mysteryNumber = Math.floor(Math.random() * 1000)
 
 const portraits = [
   'assets/portrait1.png',
@@ -15,9 +15,9 @@ const handleMessage = (portraitIndex, message) => {
 
 const handleLock = (lockState = 123) => {
   const lockDigits = lockState.toString().padStart(3, '0')
-  document.querySelector(".digits .c").innerHTML = lockDigits[0];
-  document.querySelector(".digits .d").innerHTML = lockDigits[1];
-  document.querySelector(".digits .u").innerHTML = lockDigits[2];
+  document.querySelector('.digits .c').innerHTML = lockDigits[0]
+  document.querySelector('.digits .d').innerHTML = lockDigits[0]
+  document.querySelector('.digits .u').innerHTML = lockDigits[0]
 
 }
 
@@ -40,26 +40,22 @@ input.onchange = () => {
     return
   }
 
-  
   if (isNaN(inputNumber)) {
-    handleMessage(count, 'C\'est un cadenas à 3 chiffres...')
+    handleMessage(count, 'un nombre connard')
     return
   }
 
   handleLock(inputNumber)
 
   if (inputNumber > mysteryNumber) {
-    handleMessage(count, 'Trop grand ! Ce n\'est pas le bon code, cherche l\'indice !')
+    handleMessage(count, 'trop grand!!!!')
   }
   
   else if (inputNumber < mysteryNumber) {
-    handleMessage(count, 'Trop petit ! Ce n\'est pas le bon code, cherche l\'indice !')
+    handleMessage(count, 'trop petit!!!!')
   }
 
-  else if (inputNumber === mysteryNumber) {
-    handleMessage(count, 'Bien joué bonhomme !!!!')
-  }
   
 }
 
-handleMessage(0, 'Vite, trouve le bon code ! ils disaient qu\'un indice se trouvait dans la salle...')
+handleMessage(0, 'Vite, trouve le bon code ! ils disaient qu\'un indice se trouvait dans la salle')
