@@ -28,3 +28,8 @@
   align-items: center;
   justify-content: center;
 }
+button {
+  color: burlywood;
+  font-size: 'Ruso One', sans serif;
+  
+}
