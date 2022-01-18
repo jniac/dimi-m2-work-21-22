@@ -1,7 +1,7 @@
-// https://github.com/jniac/dimi-m2-start-21-22
-// https://github.com/jniac/dimi-m2-start-21-22/blob/main/guess-the-number-web/main.js
+//JEU MYSTERY NUMBER
 
-const mysteryNumber = 78
+
+const mysteryNumber = Math.round(Math.random() * 100)
 
 const screenHome = document.querySelector('.screen.home')
 const screenResult = document.querySelector('.screen.result')
