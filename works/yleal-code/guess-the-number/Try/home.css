@@ -32,12 +32,12 @@ button {
   color: red;
   font-size: 'Ruso One', sans serif;
   background-color: gray; 
-  border: 3px;
+  border: none;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 23px;
+  font-size: 10px;
   width:80px;
   height:19px;
 
