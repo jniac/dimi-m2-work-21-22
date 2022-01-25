@@ -1,22 +1,81 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>"Guess the number"</h1>
-  <h2>Version WEB</h2>
-  <input type="text" placeholder="Type your number">
-  <button id="submit">OK</button>
 
-  <div class="response">
-    <span class="input">35</span>
-    <span class="comment">Trop petit.</span>
-  </div>
+<script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
 
-  <script src="main.js"></script>
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Guess the number</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+    <meta name="viewport" content= "width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    
+   <!-- Hotjar Tracking Code for https://setucoder.github.io/guessthenumber2/ -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2410679,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+    
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1 class="relativePosition"> Number guessing game </h1>
+      <h2 class="relativePosition">I've selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. Jack The Dog will tell you if your guess was too high or too low. And also, try double tapping/clicking on your device! Good luck !</h2>
+
+      <div class="form">
+        <div class="textFieldGrid">
+          <input type="text" id="guessField" class="guessField relativePosition userField" placeholder="Enter a guess" maxlength="3">
+          <div class="guessMessageWrapper wrong">
+            <div class="tiltedSquare"></div>
+             <p class="lowOrHi"></p>
+             <p class="lastResult"></p>
+          </div>
+        </div>
+        <div id="buttonsWrapper">
+            <input id="submitButton" type="submit" class="guessSubmit submit relativePosition userField submitHover" value="Submit guess">
+        </div>
+      </div>
+
+      <p class="guesses"></p>
+
+      <div id="jack">
+        <div class="belly"></div>
+        <div class="butt"></div>
+        <div class="face"></div>
+        <div class="final"></div>
+      </div>
+
+      <div id="illu-jack"></div>
+    </div>
+
+    <script src="main.js">
+    </script>
+    
+    <script type="text/javascript">
+      var color = ["#5F4B8BFF","#000000FF","#00203FFF","#2C5F2D","#00539CFF","#0063B2FF","#101820FF","#5CC8D7FF","#89ABE3FF","#F2AA4CFF","#A07855FF","#603F83FF","#2BAE66FF","#FAD0C9FF","#2D2926FF","#DAA03DFF","#990011FF","#F2EDD7FF","#F95700FF","#FFD662FF","#DF6589FF","#FFE77AFF","#500472","#F8D3E2"]
+      var i = 0;
+    document.querySelector("body").addEventListener("dblclick",
+    function(){
+    i = i < color. length ? ++i : 0;
+    document.querySelector("body").style.background = color[i]
+    })
+    </script>
+
+    <script type="text/javascript">
+      var color2 = ["#E69A8DFF","#FFFFFFFF","#ADEFD1FF","#97BC62FF","#EEA47FFF","#9CC3D5FF","#FEE715FF","#B1624EFF","#FCF6F5FF","#101820FF","#D4B996FF","#C7D3D4FF","#FCF6F5FF","#6E6E6DFF","#E94B3CFF","#616247FF","#FCF6F5FF","#755139FF","#FFF","#00539CFF","#3C1053FF","#2C5F2DFF","#e52165","#9FC131FF"]
+      var j = 0;
+    document.querySelector("body").addEventListener("dblclick",
+    function(){
+    j = j < color. length ? ++j : 0;
+    document.querySelector("body").style.color = color2[i]
+    })
+    </script>
+
+  </body>
 </html>
