@@ -16,7 +16,11 @@ const handleMessage = (portraitIndex, message) => {
 const handleLock = (lockState = 123) => {
   const lockDigits = lockState.toString().padStart(3, '0')
   document.querySelector('.digits .c').innerHTML = lockDigits[0]
+  document.querySelector('.digits .d').innerHTML = lockDigits[0]
+  document.querySelector('.digits .u').innerHTML = lockDigits[0]
+
 }
+
 
 const fail = () => {
   alert('perdu!')
@@ -54,4 +58,4 @@ input.onchange = () => {
   
 }
 
-handleMessage(0, 'hey vite sauve moi')
+handleMessage(0, 'Vite, trouve le bon code ! ils disaient qu\'un indice se trouvait dans la salle')

@@ -1,53 +1,43 @@
-const mysteryNumber = Math.round(Math.random() * 100)
+//Commencer le jeu
+function start(){
 
-const response = document.querySelector('div.response')
-response.remove()
+  var disp = document.getElementById("output");
+  document.getElementById("begin").style.visibility = "hidden";
+  document.getElementById("guess").readOnly = false;
+  document.getElementById("guess").style.color = "black";
 
-const cloneResponse = (inputValue, commentValue) => {
-  const clone = response.cloneNode(true)
-  document.body.append(clone)
-  clone.querySelector('span.input').innerHTML = inputValue
-  clone.querySelector('span.comment').innerHTML = commentValue
+  document.getElementById("guess").style.display = "inline-block";
+  
+  disp.innerHTML = "Devine son âge !";
+
+  
+  document.getElementById("hiLo").innerHTML = "";
+  document.getElementById("guess").value = "";
 }
 
-const submit = () => {
-  const input = document.querySelector('input')
-  const inputNumber = parseFloat(input.value)
 
-  document.body.classList.remove('wrong-state')
-
-  if (isNaN(inputNumber)) {
-
-    cloneResponse(input.value, `Ceci n'est pas un nombre`)
-    document.body.classList.add('wrong-state')
-
-  } else if (inputNumber < 0 || inputNumber > 100) {
-
-    cloneResponse(input.value, `Le nombre doit être compris entre 0 et 100.`)
-    document.body.classList.add('wrong-state')
-
-  } else if (inputNumber < mysteryNumber) {
-
-    cloneResponse(input.value, `Trop petit.`)
-
-  } else if (inputNumber > mysteryNumber) {
-
-    cloneResponse(input.value, `Trop grand.`)
-
-  } else if (inputNumber === mysteryNumber) {
-
-    cloneResponse(input.value, `EXACT!!!`)
+//Vérification de la réponse
+function guessTheAge(){
+  
+  
+  var guess = document.getElementById("guess").value;
+  var message = document.getElementById("hiLo");
+  
+  if (guess > 32){
+    message.innerHTML = "Cette célébrité est plus jeune !";
   }
-
-  input.value = ''
-}
-
-document.querySelector('button#submit').onclick = () => {
-  submit()
-}
-
-document.body.onkeydown = (event) => {
-  if (event.key === 'Enter') {
-    submit()
+  else if (guess < 32){
+    message.innerHTML = "Cette célébrité est plus agée !";
   }
+  else {
+    document.getElementById("guess").style.color = "#FDCCBA";
+    document.getElementById("guess").readOnly = true;
+    message.innerHTML = "C'est la bonne réponse ! Bravo";
+    var again = document.getElementById("begin");
+    again.style.visibility = "visible";
+    again.innerHTML = "Rejouer";
+    
+  }
+  
 }
+

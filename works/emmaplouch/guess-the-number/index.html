@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>"Guess the number"</h1>
-  <h2>Version WEB</h2>
-  <input type="text" placeholder="saisir un nombre ici">
-  <button id="submit">OK</button>
-
-  <div class="response">
-    <span class="input">40</span>
-    <span class="comment">Trop petit.</span>
+<button id="begin" onclick="start()" class="btn">Devine son âge</button>  <div>
+    <div class="carousel">
+      <h2 id="output"></h2>
+      <img src="https://www.cine974.com/images/personnes/lily-collins-rM4GPL9C.jpg">
+      <span>Lily Collins</span>
+    </div>
+    <form>
+      <input type="number" id="guess" onkeyUp="guessTheAge()" >
+      <p id="hiLo"></p>
+    </form>
   </div>
-
-  <script src="main.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
-</html>

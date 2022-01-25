@@ -15,4 +15,9 @@ footer .dialog .text {
   flex: 1 0 0;
   background-color: #ccc;
   margin-left: 8px;
+  padding: 16px;
+  position: relative;
+  text-align: justify;
+  font-size: 14px;
+  font-weight: 700;
 }
