@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body, body * {
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  background-color: rgb(254, 255, 208);
+  min-height: 100vh;
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+#UI {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background-color: white;
+}
+#animals {
+  flex: 1 1 0;
+}
+
+input {
+  background-color: #fff3;
+  font-family: inherit;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+div.response {
+  display: flex;
+  align-items: center;
+  border: solid 1px white;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+div.response span.input {
+  padding: 8px;
+}
+div.response span.comment {
+  font-style: italic;
+}
+
+.responses-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
