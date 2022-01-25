@@ -1,0 +1,44 @@
+#jack {
+  position: absolute;
+  bottom: 0%;
+  left: 280px;
+  width: 30%;
+  aspect-ratio: 1384 / 482;  
+}
+
+#jack > div {
+  position: absolute;
+  position: absolute;
+  bottom: 0%;
+  left: 280px;
+  width: 30%;
+}
+
+#jack .face {
+  background-image: url(assets/JACK\ THE\ DOG.png);
+}
+
+#jack .belly {
+  background-image: url(assets/belly.png);
+}
+
+#jack .but {
+  background-image: url(assets/butt.png);
+}
+
+#jack .final {
+  background-image: url(assets/jack.png);
+}
+
+#illu-jack {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-image: url(assets/Jack\ 3D.png);
+  background-size: contain;
+  background-position-x: right;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
