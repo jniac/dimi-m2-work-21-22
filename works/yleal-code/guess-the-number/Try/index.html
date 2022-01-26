@@ -4,14 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guess the Number Game</title>
-  <h1>Exercise Guess the number try </h1>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="number-token">
-    #12
+
+  <div class="screen home">
+    <main>
+      <h1>Exercise Guess the number</h1>
+      <input type="text" placeholder="saisir un nombre">
+      <button>ok</button>
+    </main>
+    <footer>
+      <p>© Designed by YLeal 2022</p>
+    </footer>
   </div>
 
+  <div class="screen result" style="visibility: hidden;">
+    <div class="input-number">78</div>
+    <div class="illustration"></div>
+    <button>Nouvel Essai</button>
+  </div>
+  
   <script src="main.js" type="module"></script>
 </body>
 </html>

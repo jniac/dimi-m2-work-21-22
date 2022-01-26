@@ -1,53 +1,114 @@
-const mysteryNumber = Math.round(Math.random() * 100)
+var randomNumber = Math.floor(Math.random() * 100) + 1;
+console.log(randomNumber);
 
-const response = document.querySelector('div.response')
-response.remove()
+var guesses = document.querySelector(' .guesses');
+var lastResult = document.querySelector(' .lastResult');
+var lowOrHi = document.querySelector(' .lowOrHi');
+var guessMessageWrapper = document.querySelector('.guessMessageWrapper')
+var tiltedSquare = document.querySelector('.tiltedSquare')
+var shake = document.querySelector('.shake')
 
-const cloneResponse = (inputValue, commentValue) => {
-  const clone = response.cloneNode(true)
-  document.body.append(clone)
-  clone.querySelector('span.input').innerHTML = inputValue
-  clone.querySelector('span.comment').innerHTML = commentValue
-}
+var guessSubmit = document.querySelector(' .guessSubmit');
+var guessField = document.querySelector(' .guessField');
 
-const submit = () => {
-  const input = document.querySelector('input')
-  const inputNumber = parseFloat(input.value)
+guessSubmit.addEventListener('click', checkGuess);
 
-  document.body.classList.remove('wrong-state')
+console.log(guessField.value);
 
-  if (isNaN(inputNumber)) {
+var guessCount = 1;
+var resetButton;
 
-    cloneResponse(input.value, `This isn't a number`)
-    document.body.classList.add('wrong-state')
+function checkGuess() {
+  var userGuess = Number(guessField.value);
+  guessMessageWrapper.style.display = 'block';
+  if (guessCount === 1 ) {
+    guesses.textContent = 'Previous guesses: ';
+  }
+  guesses.textContent += userGuess + ' ';
 
-  } else if (inputNumber < 0 || inputNumber > 100) {
+  if (userGuess === randomNumber) {
+    lastResult.textContent = 'Great! Got it right!';
+    lastResult.style.backgroundColour = 'green';
+    party.confetti(this)
+    lowOrHi.textContent = ' ';
+    guessMessageWrapper.classList.add('right');
+    tiltedSquare.classList.add('right');
+    setGameOver();
+  } else if (guessCount === 10){
+    lastResult.textContent = 'Game Over!'
+    lastResult.style.color = 'white'
+    lowOrHi.textContent = '';
+    setGameOver();
+  } else {
+    /*
+    lastResult.textContent = 'Wrong!';
+    lastResult.style.backgroundColour = 'red';
+    */
+    if (userGuess < randomNumber) {
+      lowOrHi.textContent = 'Way too low!';
+      shakeFuntion()
 
-    cloneResponse(input.value, `Le nombre doit être compris entre 0 et 100.`)
-    document.body.classList.add('wrong-state')
-
-  } else if (inputNumber < mysteryNumber) {
-
-    cloneResponse(input.value, `Too small.`)
-
-  } else if (inputNumber > mysteryNumber) {
-
-    cloneResponse(input.value, `Too big.`)
-
-  } else if (inputNumber === mysteryNumber) {
-
-    cloneResponse(input.value, `CONGRATS !`)
+    } else if (userGuess > randomNumber) {
+        lowOrHi.textContent = 'Way too high!';
+        shakeFuntion()
+    }
   }
 
-  input.value = ''
+  guessCount++;
+  guessField.value = '';
+  guessField.focus();
 }
 
-document.querySelector('button#submit').onclick = () => {
-  submit()
-}
-
-document.body.onkeydown = (event) => {
-  if (event.key === 'Enter') {
-    submit()
+function shakeFuntion() {
+      // restart animation
+      guessMessageWrapper.classList.add('shake');
+      setTimeout(function() {
+        guessMessageWrapper.classList.remove('shake');
+      }, 820);
   }
+
+
+function setGameOver() {
+
+  guessField.disabled = true;
+  guessSubmit.disabled = true;
+  resetButton = document.createElement('button');
+  resetButton.className = 'submit relativePosition userField submitHover';
+  var submitButton = document.getElementById('submitButton') ;
+  submitButton.classList.remove('submitHover');
+  resetButton.textContent = 'Start new game';
+  document.body.appendChild(resetButton);
+  resetButton.addEventListener('click', resetGame)
+
+  var buttonsWrapper = document.getElementById( 'buttonsWrapper' );
+  buttonsWrapper.appendChild( resetButton );
+
+}
+
+function resetGame() {
+  guessCount = 1;
+
+  var resetParas = document.querySelectorAll('.resultParas p');
+  for (var i = 0 ; i < resetParas.length ; i++){
+    resetParas[1].textContent = '';
+  }
+
+  resetButton.parentNode.removeChild(resetButton);
+  guessSubmit.className = 'submit relativePosition userField submitHover';
+
+  guessMessageWrapper.style.display = 'none';
+  guessMessageWrapper.classList.remove('right');
+  tiltedSquare.classList.remove('right');
+  lastResult.textContent = '';
+
+  guessField.disabled = false;
+  guessSubmit.disabled = false;
+  guessField.value = '';
+  guessField.focus();
+  guesses.textContent = '';
+
+  lastResult.style.backgroundColour = 'white';
+
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+  console.log(randomNumber);
 }

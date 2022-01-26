@@ -1,57 +1,61 @@
-const mysteryNumber = Math.round(Math.random() * 100)
+const mysteryNumber = Math.floor(Math.random() * 1000)
 
-const response = document.querySelector('div.response')
-response.remove()
+const portraits = [
+  'assets/portrait1.png',
+  'assets/portrait2.png',
+  'assets/portrait3.png',
+  'assets/portrait4.png',
+]
 
-const cloneResponse = (inputValue, commentValue) => {
-  const clone = response.cloneNode(true)
-  document.body.append(clone)
-  clone.querySelector('span.input').innerHTML = inputValue || '&nbsp;'
-  clone.querySelector('span.comment').innerHTML = commentValue
+const handleMessage = (portraitIndex, message) => {
+  document.querySelector('.dialog .text').innerHTML = message
+  const portrait = portraits[portraitIndex]
+  document.querySelector('.dialog .portrait').style.backgroundImage = `url(${portrait})`
 }
 
-const submit = () => {
-  const input = document.querySelector('input')
+const handleLock = (lockState = 123) => {
+  const lockDigits = lockState.toString().padStart(3, '0')
+  document.querySelector('.digits .c').innerHTML = lockDigits[0]
+  document.querySelector('.digits .d').innerHTML = lockDigits[0]
+  document.querySelector('.digits .u').innerHTML = lockDigits[0]
+
+}
+
+
+const fail = () => {
+  alert('perdu!')
+}
+
+const input = document.querySelector('input')
+let count = 0
+const countMax = 4
+input.onchange = () => {
+  
   const inputNumber = parseFloat(input.value)
 
-  document.body.classList.remove('wrong-state')
+  count = count + 1
+
+  if (count === countMax) {
+    fail()
+    return
+  }
 
   if (isNaN(inputNumber)) {
-
-    cloneResponse(input.value, `Ceci n'est pas un nombre`)
-    document.body.classList.add('wrong-state')
-
-  } else if (inputNumber < 0 || inputNumber > 100) {
-
-    cloneResponse(input.value, `Le nombre doit être compris entre 0 et 100.`)
-    document.body.classList.add('wrong-state')
-
-  } else if (inputNumber < mysteryNumber) {
-
-    cloneResponse(input.value, `Trop petit.`)
-
-  } else if (inputNumber > mysteryNumber) {
-
-    cloneResponse(input.value, `Trop grand.`)
-
-  } else if (inputNumber === mysteryNumber) {
-
-    cloneResponse(input.value, `EXACT!!!`)
+    handleMessage(count, 'un nombre connard')
+    return
   }
 
-  input.value = ''
-}
+  handleLock(inputNumber)
 
-document.querySelector('button#submit').onclick = () => {
-  submit()
-}
-
-document.body.onkeydown = (event) => {
-  if (event.key === 'Enter') {
-    submit()
+  if (inputNumber > mysteryNumber) {
+    handleMessage(count, 'trop grand!!!!')
   }
+  
+  else if (inputNumber < mysteryNumber) {
+    handleMessage(count, 'trop petit!!!!')
+  }
+
+  
 }
 
-
-
-
+handleMessage(0, 'Vite, trouve le bon code ! ils disaient qu\'un indice se trouvait dans la salle')
