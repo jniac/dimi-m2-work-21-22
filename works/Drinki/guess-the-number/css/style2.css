@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url(anim.css);
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;800&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0;
+}
+
+span, h1, h3, label{
+    color: #292b2a;
+}
+
+div.main-container{
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+
+div.container-left h1{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+}
+
+div.container-left h2{
+    color: #43484c;
+    font-weight: 200;
+}
+
+div.container-right{
+    color: #292b2a;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    text-align: center;
+    max-height: 100vh;
+    background-color: #f1f4f9;
+    border-left: solid 2px #f0f0f0;
+}
+
+div.container-left{
+    width: 70%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 200px;
+    text-align: center;
+}
+
+div.rangebar{
+    display: flex;
+    flex-direction: row;
+}
+
+label.label-num{
+    font-size: 32px;
+    background-color: #007aff;
+    padding: 10px 17px;
+    border-radius: 60px;
+    margin: 50px 0px;
+    width: 72px;
+    height: 72px;
+    color: #fff;
+    font-weight: 700;
+}
+
+label#min-range{
+    background-color: #ff7f27;
+}
+
+div.response{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    margin: 30px;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+div.response img{
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+div.response h3{
+    margin: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 24px;
+}
+
+div.response p{
+    margin-bottom: 40px;
+}
+
+button.sub-button{
+    font-size: 24px;
+}
+
+div.chat{
+    height: 80vh;
+    margin: 0 30px;
+    padding: 20px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    overflow-y: scroll;
+    direction: ltr;
+    scrollbar-color: #d4aa70 #e4e4e4;
+    scrollbar-width: thin;
+    text-align: left;
+}
+
+.chat::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.chat::-webkit-scrollbar-track {
+    background-color: #dfdfdf;
+    border-radius: 10px;
+}
+.chat::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 123, 255, 0.3);
+    border-radius: 10px;
+}
+
+div.chat p{
+    margin: 0;
+}
+
+div.line-down{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.one-res{
+    padding: 15px 10px 20px 10px;
+    margin: 10px;
+    border-bottom: solid 1px #e7e7e7;
+}
+
+div.line-up{
+    margin-bottom: 3px;
+    margin-left: 30px;
+    font-weight: 300;
+    color: #464646;
+}
+
+div.line-down{
+    font-weight: 500;
+    vertical-align: middle;
+    color: #292b2a;
+}
+
+div.chat img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+div.chat div.one-res:first-child{
+    border : solid 1px #e7e7e7;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+p.res i:nth-child(1){
+    color: #d4aa70;
+}
+
+p.res i:nth-child(2){
+    color: #007aff;
+}
+
+div.win-screen{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    width: 85vw;
+    height: 85vh;
+    background-color:rgba(0, 122, 255, 0.7);
+    position:absolute;
+    left: 7.5vw;
+    top: 7.5vh;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    color: #fff;
+}
+
+div.win-screen h1{
+    color: #fff;
+    font-weight: 800;
+    font-size: 80px;
+}
+
+div.win-screen h3{
+    color: #fff;
+    font-weight: 800;
+    font-size: 70px;
+}
+
+div .win-screen button{
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+
+
+
+
