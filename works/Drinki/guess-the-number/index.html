@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style2.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main-container">
+    <!--Panneaux de gauche (main)-->
+    <div class="container-left">
+      <h1>Trouve le bon nombre</h1>
+      <h2>Grâce au deux barres d'intervalles</h2>
+      <div class="row align-items-center text-center">
+        <div class="col">
+          <label for="minRange" class="form-label label-num" id="min-range"></label>
+          <input type="range" class="form-range range-style" min="0" max="50" step="1" id="minRange">
+        </div>
+        <div class="col">
+          <label for="maxRange" class="form-label label-num" id="max-range"></label>
+          <input type="range" class="form-range range-style" min="50" max="100" step="1" id="maxRange">
+        </div>
+      </div>
+  
+      <div class="align-items-center text-center">
+        <div class="row">
+          <div class="progress mt-5" style="height: 30px">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="minProgressBar">0</div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" id="midProgressBar"></div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary" role="progressbar" style="width: 0%; background-color: #000" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="maxProgressBar"></div>
+          </div>
+        </div>
+        <div class="row btn-group mt-5 col-2">
+          <button class="btn btn-secondary sub-button" id="submit">Valider</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Panneaux de droite (latbar)-->
+    <div class="container-right">
+      <div class="response">
+        <img src="images/icon-historique.png" alt="">
+        <h3>Historique des essais</h3>
+      </div>
+      <div class="chat">
+        <!--
+        <div class="one-res">
+          <div class="line-up"></div>
+          <div class="line-down"></div>
+        </div>
+        -->
+      </div>
+    </div>
+
+    <div class="win-screen scale-up-center">
+      <h1>BRAVO !</h1>
+      <h2>Tu as trouvé le nombre mystère</h2>
+      <h3></h3>
+
+      <button class="btn btn-secondary sub-button" onclick="window.location.href='index.html'">Rejouer</button>
+    </div>
+  </div>
+
+  <!--Scripts-->
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

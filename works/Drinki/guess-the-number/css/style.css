@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap');
+@import url(anim.css);
+
+html{
+  background: rgb(221,221,221);
+  background: radial-gradient(circle, rgba(221,221,221,1) 20%, rgba(238,238,238,1) 79%, rgba(255,255,255,1) 91%);
+}
+
+body, body * {
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+h1, h2{
+  text-align: center;
+}
+
+h1{
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 72px;
+}
+
+body {
+  background-color: lightslategrey;
+  min-height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ici un style particulier, indiquant une "erreur" de saisie. */
+body.wrong-state {
+  background-color: red;
+  animation-name: wrong;
+  animation-duration: 1.2s;
+}
+
+.rangebar{
+  flex-direction: row ;
+}
+
+.label-num{
+  font-size: 32px;
+  width: 11%;
+  background-color: #1f7a1f;
+  padding: 10px 17px;
+  border-radius: 60px;
+  color: #fff;
+  margin: 50px 0px;
+}
+
+.sub-button{
+  padding: 20px;
+  margin: 20px;
+}
+
+.response{
+  margin: 10px;
+}
+
+.test{
+  background-color: #000;
+}
+
