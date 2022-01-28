@@ -1,0 +1,71 @@
+
+#ballon {
+    background-image: url(assets/ballon-1.png);
+    position: absolute;
+    bottom: 0%;
+    left: 380px;
+    height: 100%;
+    width: 30;
+    top : 0%;
+    right : 0;
+    height: 100%;
+    background-size : contain;
+    background-position-x: right;
+    background-position-y: right;
+    background-repeat: no-repeat;
+  
+}
+  
+
+  
+#avatar {
+    background-image: url(assets/FULL-BODY.png);
+    position: absolute;
+    bottom: 0%;
+    left: 280px;
+    height: 100%;
+    width: 30;
+    top : 0%;
+    right : 0;
+    height: 100%;
+    background-size : contain;
+    background-position-x: right;
+    background-position-y: right;
+    background-repeat: no-repeat;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+  }
+
+#avatar.animated {
+  animation-name: avatar-anim;
+}
+
+
+@keyframes avatar-anim {
+  0% {
+    background-image: url(assets/FULL-BODY.png);
+  }
+  33% {
+    background-image: url(assets/half-body.png);
+  }
+  66% {
+    background-image: url(assets/FULL-down-body.png);
+  }
+}
+ 
+  #perdu{
+    background-image: url(assets/tu-as-perdu.png);
+    position: absolute;
+    bottom: 0%;
+    left: 280;
+    height: 100%;
+    width: 30;
+    top : 0%;
+    right : 0;
+    height: 100%;
+    background-size : contain;
+    background-position-x: right;
+    background-position-y: right;
+    background-repeat: no-repeat;
+  
+  }

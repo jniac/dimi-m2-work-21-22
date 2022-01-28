@@ -1,45 +1,306 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url(anim.css);
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,900');
+@import url(avatar-ballon.css);
 
-body, body * {
-  margin: 0;
-  box-sizing: border-box;
-  position: relative;
+body{
+  background-color: rgb(140, 162, 233);
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #1f0981;
+  margin: 10;
 }
 
-body {
-  background-color: rgb(167, 211, 255);
-  min-height: 100vh;
-  font-family: 'Roboto Condensed', sans-serif;
-  display: flex;
-  flex-direction: column;
+.buttonforcolor{	
+	border: none;
+	background: none;
+	cursor: pointer;
+	padding: 28px 28px;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-weight: 700;
+	outline: none;
+  align-content: center;
   justify-content: center;
-  align-items: center;
-}
-body.wrong-state {
-  background-color: red;
-  animation-name: wrong;
-  animation-duration: 1.2s;
+	background: #cb4e4e;
+	color: #fff;
+	box-shadow: 0 6px #ab3c3c;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	border-radius: 50%;
 }
 
-input {
-  background-color: rgba(212, 204, 255, 0.2);
-  font-family: inherit;
+.buttonforcolor:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+}
+
+.buttonforcolor:hover {
+	box-shadow: 0 4px #ab3c3c;
+	top: 2px;
+}
+
+.buttonforcolor:active {
+	box-shadow: 0 0 #ab3c3c;
+	top: 6px;
+}
+
+.wrapper{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 90%;
+}
+
+.relativePosition{
+  position: relative;
+  margin: 0;
+}
+
+h1{
+  font-size: 5em;
+  width: 50vw;
+  max-width: 700px;
+  line-height: 1em;
+}
+
+h2{
+  padding-top: 30px;
+  font-size: 2em;
+  width: 65vw;
+  max-width: 800px;
+}
+
+.userField{
+  background: #FFFFFF;
+  border-radius: 5px;
+  height: 38px;
+  padding: 0;
   border: none;
-  padding: 8px 16px;
-  text-align: center;
+  transition: 0.2s;
+  font-size: 1.1em;
+  font-weight: 600;
 }
 
-div.response {
-  display: flex;
-  align-items: center;
-  border: solid 1px white;
-  border-radius: 4px;
-  margin-top: 8px;
+.userField:focus{
+  outline: none;
 }
-div.response span.input {
-  padding: 8px;
+
+.guessField{
+  margin-top: 65px;
+  padding-left: 10px;
+  width: 15em;
+  float: left;
 }
-div.response span.comment {
-  font-style: italic;
+
+.submit{
+  background-color: #06032b;
+  margin-top: 20px;
+  padding-left: 0;
+  width: 10em;
+  color: white;
 }
+
+.submitHover:hover{
+  background-color: #9086e6;
+}
+
+.submitHover:active{
+  background-color: #8bade8;
+}
+
+.form{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.textFieldGrid{
+  display: grid;
+  grid-template-columns: 18em 12em;
+}
+
+.guessMessageWrapper{
+  display: none;
+  position: relative;
+  border-radius: 5px;
+  height: 38px;
+  margin-top: 65px;
+  float: left;
+  background-color: transparent;
+}
+
+.tiltedSquare{
+  position: absolute;
+  top: 50%;
+  transform: translate(-6px, -50%) rotate(45deg);
+  background: #FF5B5B;
+  height: 24px;
+  width: 24px;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.lowOrHi{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  margin: 0;
+  padding-left: 15px;
+  color: rgb(255, 235 , 235);
+}
+
+.wrong{
+  background: #FF5B5B;
+}
+
+.right{
+  background: #93c57c;
+}
+
+.lastResult{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding-left: 15px;
+  color: #dcffcb;
+}
+
+
+#ballon {
+  background-image: url(assets/ballon-1.png);
+  position: absolute;
+  bottom: 0%;
+  left: 280px;
+  height: 100%;
+  width: 30;
+  top : 0%;
+  right : 0;
+  aspect-ratio:
+  height: 100%;
+  background-size : contain;
+  background-position-x: right;
+  background-position-y: right;
+  background-repeat: no-repeat;
+
+
+
+}
+
+#ballon2{
+  background-image: url(assets/BALLON-2.png);
+  position: absolute;
+  bottom: 0%;
+  left: 280px;
+  height: 100%;
+  width: 30;
+  top : 0%;
+  right : 0;
+  aspect-ratio:
+  height: 100%;
+  background-size : contain;
+  background-position-x: right;
+  background-position-y: right;
+  background-repeat: no-repeat;
+
+}
+
+
+#ballon3{
+  background-image: url(assets/BALLON-3.png);
+  position: absolute;
+  bottom: 0%;
+  left: 280px;
+  height: 100%;
+  width: 30;
+  top : 0%;
+  right : 0;
+  aspect-ratio:
+  height: 100%;
+  background-size : contain;
+  background-position-x: right;
+  background-position-y: right;
+  background-repeat: no-repeat;
+
+}
+
+
+#ballon4{
+  background-image: url(assets/BALLON-4.png);
+  position: absolute;
+  bottom: 0%;
+  left: 280px;
+  height: 100%;
+  width: 30;
+  top : 0%;
+  right : 0;
+  aspect-ratio:
+  height: 100%;
+  background-size : contain;
+  background-position-x: right;
+  background-position-y: right;
+  background-repeat: no-repeat;
+
+}
+
+
+#ballon5{
+  background-image: url(assets/BALLON-5.png);
+  position: absolute;
+  bottom: 0%;
+  left: 280px;
+  height: 100%;
+  width: 30;
+  top : 0%;
+  right : 0;
+  aspect-ratio:
+  height: 100%;
+  background-size : contain;
+  background-position-x: right;
+  background-position-y: right;
+  background-repeat: no-repeat;
+
+}
+
+
+#ballon6{
+  background-image: url(assets/BALLON-6.png);
+  position: absolute;
+  bottom: 0%;
+  left: 280px;
+  height: 100%;
+  width: 30;
+  top : 0%;
+  right : 0;
+  aspect-ratio:
+  height: 100%;
+  background-size : contain;
+  background-position-x: right;
+  background-position-y: right;
+  background-repeat: no-repeat;
+
+}
+
+
+#ballon7{
+  background-image: url(assets/BALLON-7.png);
+  position: absolute;
+  bottom: 0%;
+  left: 280px;
+  height: 100%;
+  width: 30;
+  top : 0%;
+  right : 0;
+  aspect-ratio:
+  height: 100%;
+  background-size : contain;
+  background-position-x: right;
+  background-position-y: right;
+  background-repeat: no-repeat;
+
+}
+
+
+
