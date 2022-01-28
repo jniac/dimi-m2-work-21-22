@@ -64,7 +64,7 @@ const submit = () => {
      
   }
 
-  input.value = ''
+  input.value = '' 
 }
 
 document.querySelector('#submitButton').onclick = () => {
